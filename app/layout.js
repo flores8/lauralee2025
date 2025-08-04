@@ -1,4 +1,5 @@
 import './globals.css'
+import InteractiveFooter from './components/InteractiveFooter'
 
 export const metadata = {
   title: 'Lauralee - Designer, Wife, Mother, Lifelong Learner',
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link 
@@ -18,17 +20,10 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <div className="container">
-          <nav>
-            <a href="https://lauralee.design" target="_blank" rel="noopener noreferrer">lauralee.design</a>
-            {' · '}
-            <a href="https://lauralee.space" target="_blank" rel="noopener noreferrer">lauralee.space</a>
-          </nav>
           <main>
             {children}
           </main>
-          <footer>
-            <p>© {new Date().getFullYear()} Lauralee</p>
-          </footer>
+          <InteractiveFooter />
         </div>
       </body>
     </html>

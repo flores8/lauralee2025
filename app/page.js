@@ -5,10 +5,10 @@ export default function Home() {
     <div className="intro">
       <h1>I'm Lauralee</h1>
       <p>
-        designer, wife, mother, and lifelong learner.
+        Designer, wife, mother, and lifelong learner.
       </p>
       <p>
-        I believe the best work comes from staying endlessly curious - about craft, 
+        I believe the best work comes from staying endlessly curious - about your craft, 
         about technology, about the small design choices that shape our daily lives.
       </p>
       <p>

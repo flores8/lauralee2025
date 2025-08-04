@@ -2,7 +2,7 @@
 
 > The quiet center of everything I do.
 
-This site is my digital monograph—a place to share the full story behind my work, my values, and the thread that connects it all. Unlike my [portfolio](https://lauralee.design) or [creative playground](https://lauralee.space), this space is built for stillness and clarity. It’s not designed to impress—it’s designed to resonate.
+This site is my digital monograph, a place to share the full story behind my work, my values, and the thread that connects it all. Unlike my [portfolio](https://lauralee.design) or [creative playground](https://lauralee.space), this space is built for stillness and clarity. It’s not designed to impress, it’s designed to resonate.
 
 - **lauraleeflores.com** is the narrative core, the context that gives meaning to all my other work.  
 - Built with intentional minimalism and a focus on elegant typography, refined spacing, and narrative flow.  
@@ -28,4 +28,4 @@ The interface disappears so the story can speak.
 
 ---
 
-This repository contains the code behind the experience, but the intention is human—this site is where I get to be whole.
+This repository contains the code behind the experience, but the intention is human, this site is where I get to be whole.
