@@ -106,12 +106,19 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 0;
+  padding: 2rem 0;
   font-family: 'Nunito', sans-serif;
   font-size: 0.95rem;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  background-color: #FAF8F6;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  width: calc(100% + 4rem);
+  max-width: calc(580px + 4rem);
 }
 
 footer.visible {
@@ -176,6 +183,6 @@ footer a:hover {
   }
   
   footer {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 }
