@@ -39,9 +39,11 @@ export default function InteractiveFooter() {
 
   return (
     <footer className={isVisible ? 'visible' : ''}>
-      <a href="https://lauralee.design" target="_blank" rel="noopener noreferrer">My design work</a>
-      {' · '}
-      <a href="https://lauralee.space" target="_blank" rel="noopener noreferrer">My creative playground</a>
+      <div className="footer-links">
+        <a href="https://lauralee.design" target="_blank" rel="noopener noreferrer">My design work</a>
+        {' · '}
+        <a href="https://lauralee.space" target="_blank" rel="noopener noreferrer">My creative playground</a>
+      </div>
     </footer>
   )
 }
