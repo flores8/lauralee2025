@@ -99,7 +99,7 @@ main {
 footer {
   position: fixed;
   bottom: 0;
-  left: 52%;
+  left: 50%;
   transform: translateX(-50%) translateY(10px);
   width: 100%;
   max-width: 580px;
@@ -184,5 +184,22 @@ footer a:hover {
   
   footer {
     padding: 2rem 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    max-width: calc(100% - 3rem);
+    width: calc(100% - 3rem);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  footer.visible {
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .footer-links {
+    text-align: center;
+    width: 100%;
   }
 }
