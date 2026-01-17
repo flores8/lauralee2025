@@ -7,11 +7,8 @@ export default function Home() {
       <p>I design platform products that make complex systems legible and scalable.
       </p>
       <p>
-      I’m a staff product designer working at the intersection of infrastructure, AI, and systems design - most recently leading foundational design work at CoreWeave. I believe the best products come from deep curiosity about people, technology, and the constraints that shape real-world systems.
+      I'm a staff product designer working at the intersection of infrastructure, AI, and systems design - most recently leading foundational design work at CoreWeave. I believe the best products come from deep curiosity about people, technology, and the constraints that shape real-world systems.
       </p>
-      <Link href="/about" className="more-link">
-        More about me →
-      </Link>
     </div>
   )
 }

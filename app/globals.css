@@ -57,16 +57,55 @@ a:hover {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 2rem;
+  padding-top: 4rem;
+}
+
+/* Navigation */
+.top-nav {
+  font-size: 0.8rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.top-nav a {
+  opacity: 0.6;
+  margin-right: 2rem;
+  transition: opacity 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.top-nav a:hover {
+  opacity: 1;
+}
+
+.top-nav a.active {
+  opacity: 1;
+  border-bottom: 1px solid #D6CCC2;
+  padding-bottom: 2px;
+}
+
+.nav-separator {
+  margin: 0 0.75rem;
+  opacity: 0.4;
 }
 
 /* Main Content */
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 8rem);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 4rem 0;
   animation: fadeIn 0.6s ease-out;
+}
+
+/* Main Layout (for pages with navigation) */
+.main-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Home Page Specific */
@@ -94,6 +133,163 @@ main {
 .more-link:hover {
   opacity: 1;
 }
+
+/* Portfolio Overview */
+.portfolio-overview {
+  max-width: 100%;
+}
+
+.portfolio-intro {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.portfolio-card {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-card-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  background: #E8E5E1;
+}
+
+.portfolio-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-card-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #2D2A26;
+}
+
+.portfolio-card-tagline {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  opacity: 0.8;
+}
+
+.portfolio-card-meta {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+/* Project Detail */
+.project-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+.project-header {
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.meta-separator {
+  margin: 0 0.5rem;
+}
+
+.project-description {
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Project Navigation */
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E8E5E1;
+}
+
+.project-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  transition: opacity 0.2s ease;
+}
+
+.project-nav-link:hover {
+  opacity: 0.7;
+}
+
+.project-nav-link.next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.nav-label {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.nav-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 
 
 /* Animations */
@@ -133,5 +329,50 @@ main {
   
   .more-link {
     font-size: 1.1rem;
+  }
+
+  .top-nav {
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-separator {
+    margin: 0 0.5rem;
+  }
+
+  .portfolio-overview {
+    padding: 0;
+  }
+
+  .portfolio-intro {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-grid {
+    gap: 3rem;
+  }
+
+  .portfolio-card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-detail {
+    padding: 3rem 0;
+  }
+
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-navigation {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-nav-link.next {
+    text-align: left;
+    align-items: flex-start;
   }
 }

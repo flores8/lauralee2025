@@ -83,12 +83,19 @@ import Image from 'next/image'
 - **Links**: `#5D6B85` (muted blue-grey)
 - **Link Hover**: `#445163` (darker blue-grey)
 - **Accent**: `#D6CCC2` (warm taupe)
+- **Border/Dividers**: `#E8E5E1` (soft warm grey)
 
 ### Layout Constraints
 
-- **Max Width**: 650px (container), 580px (intro section)
+- **Max Width**: 650px (container), 580px (intro section), 800px (project detail)
 - **Padding**: 2rem desktop, 1.5rem mobile
 - **Responsive Breakpoint**: 768px
+
+### Navigation
+
+- **Position**: Fixed top-right
+- **Style**: Minimal, subtle (0.7 opacity, hover to 1.0)
+- **Placement**: Only on About and Portfolio pages (not on Home)
 
 ### Design Principles
 
@@ -103,12 +110,45 @@ import Image from 'next/image'
 
 ```
 /app
-  /about         - Deeper narrative page
-  /components    - Shared React components
-  globals.css    - Global styles
-  layout.js      - Root layout
-  page.js        - Home page
-/public          - Static assets (SVGs)
+  /(main)              - Route group with navigation (doesn't affect URLs)
+    /about             - About page (with navigation)
+    /portfolio         - Portfolio section
+      page.js          - Portfolio overview/gallery
+      portfolio-data.js - Project metadata and content
+      /[slug]          - Dynamic project detail pages
+    layout.js          - Layout with Navigation component
+  /components          - Shared React components
+    Navigation.js      - Top navigation (About | Portfolio)
+  globals.css          - Global styles
+  layout.js            - Root layout (minimal, no nav)
+  page.js              - Home page (minimal, no nav)
+/public                - Static assets (SVGs)
+```
+
+### Route Architecture
+
+- **Home (`/`)**: Clean, minimal page with no navigation. Links to portfolio and about.
+- **About (`/about`)**: Narrative page with top navigation.
+- **Portfolio Overview (`/portfolio`)**: Gallery view of all portfolio projects with top navigation.
+- **Project Details (`/portfolio/[slug]`)**: Individual project pages with prev/next navigation.
+
+### Portfolio Data Structure
+
+Portfolio content is managed in `/app/(main)/portfolio/portfolio-data.js`:
+
+```javascript
+{
+  slug: 'project-name',           // URL slug
+  title: 'Project Title',         // Display title
+  tagline: 'Brief description',   // Shown on overview
+  thumbnail: 'S3_URL',            // Overview page image
+  year: '2024',                   // Project year
+  role: 'Staff Product Designer', // Your role
+  description: ['...'],           // Array of paragraphs
+  images: [                       // Full project images
+    { url: 'S3_URL', alt: '...', width: 1200, height: 800 }
+  ]
+}
 ```
 
 ---
@@ -132,6 +172,8 @@ npm run lint   # Run ESLint
 4. **Keep animations subtle**: Motion should feel imperceptible, never distracting
 5. **Image optimization**: Always use Next.js Image component for photos/graphics
 6. **Content-first**: Design decisions serve the narrative, not the other way around
+7. **Navigation architecture**: Home page remains nav-free; all other pages use the (main) route group layout
+8. **Portfolio updates**: Modify `/app/(main)/portfolio/portfolio-data.js` to add/edit portfolio content
 
 ---
 
