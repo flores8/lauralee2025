@@ -138,5 +138,5 @@ npm run lint   # Run ESLint
 ## Notes
 
 - Site philosophy: "The quiet center of everything I do"
-- Part of a trilogy: lauraleeflores.com (narrative), lauralee.design (portfolio), lauralee.space (playground)
+- Part of a trilogy: lauraleeflores.com (narrative and portfolio), lauralee.design (redirecting to lauraleeflores.com), lauralee.space (playground)
 - This site serves as the contextual core that gives meaning to the other properties
