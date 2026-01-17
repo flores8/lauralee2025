@@ -139,10 +139,14 @@ main {
   max-width: 100%;
 }
 
+.portfolio-overview h1 {
+  margin-bottom: 0.5rem;
+}
+
 .portfolio-intro {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   opacity: 0.8;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   max-width: 600px;
 }
 
@@ -157,8 +161,27 @@ main {
   transition: transform 0.3s ease;
 }
 
-.portfolio-card:hover {
-  transform: translateY(-4px);
+.portfolio-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-card-thesis {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-card-role {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.portfolio-card-link {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  opacity: 0.6;
 }
 
 .portfolio-card-image {
