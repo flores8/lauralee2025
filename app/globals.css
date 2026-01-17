@@ -111,6 +111,7 @@ main {
 /* Home Page Specific */
 .intro {
   max-width: 580px;
+  margin-bottom: 6rem;
 }
 
 .intro h1 {
@@ -137,6 +138,7 @@ main {
 /* Portfolio Overview */
 .portfolio-overview {
   max-width: 100%;
+  margin-bottom: 6rem;
 }
 
 .portfolio-overview h1 {
@@ -173,15 +175,22 @@ main {
 }
 
 .portfolio-card-role {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.6;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.8;
+  color: #2d2a26;
 }
 
 .portfolio-card-link {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 0.5rem;
+  color: #5d6b85;
   opacity: 0.6;
+  transition: 0.2s ease;
+}
+
+.portfolio-card-link:hover {
+  opacity: 1;
 }
 
 .portfolio-card-image {
