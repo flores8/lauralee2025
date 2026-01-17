@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Lauralee - Designer, Wife, Mother, Lifelong Learner',
-  description: 'The quiet center of everything I do. A personal narrative and bio hub.',
+  title: 'Lauralee Flores — Systems & Platform Product Designer',
+  description: 'Staff product designer focused on system-level UX, platform foundations, and designing products that scale with clarity and trust.',
 }
 
 export default function RootLayout({ children }) {
