@@ -1,5 +1,4 @@
 import './globals.css'
-import InteractiveFooter from './components/InteractiveFooter'
 
 export const metadata = {
   title: 'Lauralee - Designer, Wife, Mother, Lifelong Learner',
@@ -22,7 +21,6 @@ export default function RootLayout({ children }) {
           <main>
             {children}
           </main>
-          <InteractiveFooter />
         </div>
       </body>
     </html>
