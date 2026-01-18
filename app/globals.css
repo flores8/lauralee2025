@@ -443,11 +443,11 @@ main {
 
 /* Case Study Content Styles */
 .case-study {
-  max-width: 800px;
   margin: 0 auto;
 }
 
 .case-study-section {
+  max-width: 800px;
   margin-bottom: 4rem;
 }
 
@@ -457,6 +457,11 @@ main {
   margin-bottom: 1.5rem;
   color: var(--color-text-primary);
   margin-top: 2.25rem;
+}
+
+.case-study-section h2.case-study-title {
+  margin-bottom: 0;
+  font-size: 2.25rem;
 }
 
 .case-study-section h3 {
@@ -485,6 +490,13 @@ main {
   font-size: 1.0625rem;
 }
 
+.case-study-divider {
+  border: none;            /* remove default */
+  height: 1px;
+  background-color: #e8e5e1;
+  margin-bottom: 4rem;
+}
+
 .case-study-image {
   margin: 4rem 0;
   max-width: 100%;
@@ -496,7 +508,7 @@ main {
 }
 
 .case-study-image figcaption {
-  margin-top: 1rem;
+  margin-top: 0;
   text-align: center;
   font-size: 0.9375rem;
   color: var(--color-text-secondary);
