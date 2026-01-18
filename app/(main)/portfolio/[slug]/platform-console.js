@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import LightboxImage from '@/app/components/LightboxImage'
 
 export default function PlatformConsole() {
   return (
@@ -29,16 +29,13 @@ export default function PlatformConsole() {
       </section>
 
       {/* You can add images anywhere in your content */}
-      <figure className="case-study-image">
-        <Image
-          src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/image-1.jpg"
-          alt="Description of your image"
-          width={1600}
-          height={1000}
-          style={{ width: '100%', height: 'auto' }}
-        />
-        <figcaption>Optional: Add a caption for your image</figcaption>
-      </figure>
+      <LightboxImage
+        src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/image-1.jpg"
+        alt="Description of your image"
+        width={1200}
+        height={800}
+        caption="Optional: Add a caption for your image"
+      />
 
       {/* Problem statement */}
       <section className="case-study-section">
@@ -49,15 +46,12 @@ export default function PlatformConsole() {
       </section>
 
       {/* Another image example */}
-      <figure className="case-study-image">
-        <Image
-          src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/image-2.jpg"
-          alt="Another image description"
-          width={1400}
-          height={900}
-          style={{ width: '100%', height: 'auto' }}
-        />
-      </figure>
+      <LightboxImage
+        src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/image-2.jpg"
+        alt="Another image description"
+        width={1400}
+        height={900}
+      />
 
       {/* Your design process */}
       <section className="case-study-section">
@@ -90,26 +84,20 @@ export default function PlatformConsole() {
 
       {/* Example of side-by-side images */}
       <div className="case-study-image-grid">
-        <figure className="case-study-image">
-          <Image
-            src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/before.jpg"
-            alt="Before state"
-            width={800}
-            height={600}
-            style={{ width: '100%', height: 'auto' }}
-          />
-          <figcaption>Before</figcaption>
-        </figure>
-        <figure className="case-study-image">
-          <Image
-            src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/after.jpg"
-            alt="After state"
-            width={800}
-            height={600}
-            style={{ width: '100%', height: 'auto' }}
-          />
-          <figcaption>After</figcaption>
-        </figure>
+        <LightboxImage
+          src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/before.jpg"
+          alt="Before state"
+          width={800}
+          height={600}
+          caption="Before"
+        />
+        <LightboxImage
+          src="https://your-bucket.s3.amazonaws.com/portfolio/platform-console/after.jpg"
+          alt="After state"
+          width={800}
+          height={600}
+          caption="After"
+        />
       </div>
 
       {/* Learnings */}

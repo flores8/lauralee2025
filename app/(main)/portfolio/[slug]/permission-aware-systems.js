@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import LightboxImage from '@/app/components/LightboxImage'
 
 export default function PermissionAwareSystems() {
   return (
@@ -45,7 +46,7 @@ export default function PermissionAwareSystems() {
           <li>Work consistently across <span className="bold">console, API, and infrastructure-as-code</span>, including for users who never interact with the UI</li>
           <li>Avoid relying on role-based assumptions, given the variability of org structures, service accounts, and automation</li>
           <li>Provide clarity without verbosity, especially in programmatic contexts where excessive explanation can create noise or risk</li>
-          <li>Remain stableas new resources, permissions, and product areas were added</li>
+          <li>Remain stable as new resources, permissions, and product areas were added</li>
         </ul>
         <p>Just as importantly, the system could not “fix” discoverability by encouraging unsafe behavior. Any increase in visibility had to be paired with equally clear boundaries. The goal was not to help users bypass access controls, but to help them reason accurately about what the platform could do and why certain actions were unavailable.</p>
 
@@ -54,11 +55,11 @@ export default function PermissionAwareSystems() {
         <p>By hiding inaccessible resources entirely, the system collapsed two distinct ideas into one: this doesn’t exist and this exists, but you can’t access it. That ambiguity distorted users’ mental models and led them to draw incorrect conclusions about the platform’s capabilities. In effect, the system was technically correct but communicatively silent.</p>
         <p>Reframing the problem this way shifted the design goal. The objective was no longer to enable action or expose more controls, but to <span className="bold">enable understanding</span>. The platform needed to clearly signal that a capability existed, explicitly state that access was restricted, and do so consistently—whether a user was interacting through the console, an API, or infrastructure-as-code—without implying entitlement or weakening security boundaries.</p>
 
-        <h2>Designing a system that communicates contraint without erasing capability</h2>
+        <h2>Designing a system that communicates constraint without erasing capability</h2>
         <p>Once the problem was reframed, the solution could not be a single pattern or UI change. It needed to be a set of <span className="bold">platform-level principles</span> that governed how permissions communicate across all surfaces—visual and non-visual alike.</p>
 
         <h3>1. Reveal existence without implying entitlement</h3>
-        <p>The most important distinction was separating <span className="bold">awareness</span>from <span className="bold">action</span>. Rather than hiding inaccessible capabilities entirely, the system needed to acknowledge that they existed while remaining explicit that the user could not act on them.</p>
+        <p>The most important distinction was separating <span className="bold">awareness</span> from <span className="bold">action</span>. Rather than hiding inaccessible capabilities entirely, the system needed to acknowledge that they existed while remaining explicit that the user could not act on them.</p>
         <p>In the console, this meant surfacing certain resources or actions in a disabled state, paired with concise, contextual explanations. The goal was not to invite interaction, but to orient users: this exists, and access is intentionally restricted. Outside the UI, the same intent needed to be expressed through clear, structured responses rather than silent failure.</p>
         <p>This preserved security boundaries while correcting a critical gap in understanding. Users could reason about what the platform offered without being misled into thinking access was accidental, temporary, or negotiable.</p>
 
@@ -69,24 +70,21 @@ export default function PermissionAwareSystems() {
 
         <h3>3. Design for users who never see the UI</h3>
         <p>A critical realization was that many CoreWeave users would never encounter these access states in the console at all. For them, the platform existed entirely through APIs, Terraform, and automation.</p>
-        <p>This required treating non-UI touchpoints as first-class UX surfaces. API errors, Terraform plan outputs, and validation messages were intentionally designed to carry the same meaning as the console: clearly signaling that a capability existed, explicitly stating that access was restricted, and avoiding language that implied misconfiguration or transient failure.</p>
+        <p>This required treating non-UI touch points as first-class UX surfaces. API errors, Terraform plan outputs, and validation messages were intentionally designed to carry the same meaning as the console: clearly signaling that a capability existed, explicitly stating that access was restricted, and avoiding language that implied misconfiguration or transient failure.</p>
         <p>Silence in these contexts was not neutral—it actively misled users. By designing access behavior at the platform level, permissions became a property of the system itself rather than an artifact of any single interface.</p>
 
         <h2>How the principles showed up across the platform</h2>
         <p>These principles were applied consistently across the console and non-UI surfaces. While the specific presentation varied by context, the intent remained the same: acknowledge capability, state restriction clearly, and avoid implying entitlement or error.</p>
         <p>Below are two representative examples.</p>
       </section>
-      
-      <figure className="case-study-image">
-        <Image
-          src="https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/create-bucket-disabled.png"
-          alt="Create bucket button disabled when in view-only mode"
-          width={1700}
-          height={292}
-          style={{ width: '100%', height: 'auto' }}
-        />
-        <figcaption><span className="bold">Console:</span> Capabilities remain visible while clearly communicating restricted access, allowing users to understand what exists without being able to act.</figcaption>
-      </figure>
+
+      <LightboxImage
+        src="https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/create-bucket-disabled.png"
+        alt="Create bucket button disabled when in view-only mode"
+        width={1700}
+        height={292}
+        caption="Console: Capabilities remain visible while clearly communicating restricted access, allowing users to understand what exists without being able to act."
+      />
 
       <section className="case-study-section">
         <h2>Aligning security, platform, and product around shared semantics</h2>
