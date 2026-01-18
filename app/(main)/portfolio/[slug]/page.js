@@ -4,9 +4,8 @@ import { getProjectBySlug, getAllProjectSlugs, projects } from '../portfolio-dat
 
 // Import individual project content components
 import PlatformConsole from './platform-console'
-// Import other projects as you create them:
-// import OnboardingAtScale from './onboarding-at-scale'
-// import PermissionAwareSystems from './permission-aware-systems'
+import OnboardingAtScale from './onboarding-at-scale'
+import PermissionAwareSystems from './permission-aware-systems'
 
 // Generate static params for all project pages
 export async function generateStaticParams() {
@@ -19,9 +18,8 @@ export async function generateStaticParams() {
 // Map slugs to their content components
 const projectComponents = {
   'platform-console': PlatformConsole,
-  // Add other projects here as you create them:
-  // 'onboarding-at-scale': OnboardingAtScale,
-  // 'permission-aware-systems': PermissionAwareSystems,
+  'onboarding-at-scale': OnboardingAtScale,
+  'permission-aware-systems': PermissionAwareSystems,
 }
 
 export default async function ProjectPage({ params }) {
@@ -50,13 +48,6 @@ export default async function ProjectPage({ params }) {
       </Link>
 
       <article className="project-content">
-        <header className="project-header">
-          <h1>{project.title}</h1>
-          <div className="project-meta">
-            <span>{project.role}</span>
-          </div>
-        </header>
-
         {ProjectContent ? (
           <ProjectContent />
         ) : (

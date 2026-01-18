@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #2D2A26;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -154,7 +158,7 @@ main {
 }
 
 .resume-link {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .resume-link a {
@@ -166,6 +170,22 @@ main {
 
 .resume-link a:hover {
   opacity: 1;
+}
+
+.how-to-read {
+  margin-bottom: 6rem;
+}
+
+.how-to-read h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.how-to-read p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
 }
 
 .portfolio-grid {
@@ -188,6 +208,7 @@ main {
   line-height: 1.5;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  opacity: 0.8;
 }
 
 .portfolio-card-role {
@@ -435,6 +456,7 @@ main {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: var(--color-text-primary);
+  margin-top: 2.25rem;
 }
 
 .case-study-section h3 {
@@ -453,13 +475,14 @@ main {
 
 .case-study-section ul,
 .case-study-section ol {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
+  margin: 1rem 0;
+  padding-left: 2.1rem;
 }
 
 .case-study-section li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
   line-height: 1.7;
+  font-size: 1.0625rem;
 }
 
 .case-study-image {
