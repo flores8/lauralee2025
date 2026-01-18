@@ -146,10 +146,26 @@ main {
 }
 
 .portfolio-intro {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   opacity: 0.8;
-  margin-bottom: 6rem;
+  margin-bottom: 0.5rem;
   max-width: 600px;
+  line-height: 1.5;
+}
+
+.resume-link {
+  margin-bottom: 6rem;
+}
+
+.resume-link a {
+  color: #5d6b85;
+  opacity: 0.6;
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+
+.resume-link a:hover {
+  opacity: 1;
 }
 
 .portfolio-grid {
@@ -377,11 +393,6 @@ main {
     padding: 0;
   }
 
-  .portfolio-intro {
-    font-size: 1rem;
-    margin-bottom: 3rem;
-  }
-
   .portfolio-grid {
     gap: 3rem;
   }
@@ -407,4 +418,84 @@ main {
     text-align: left;
     align-items: flex-start;
   }
+}
+
+/* Case Study Content Styles */
+.case-study {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.case-study-section {
+  margin-bottom: 4rem;
+}
+
+.case-study-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.case-study-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.case-study-section p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.case-study-section ul,
+.case-study-section ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.case-study-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.case-study-image {
+  margin: 4rem 0;
+  max-width: 100%;
+}
+
+.case-study-image img {
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.case-study-image figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.case-study-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .case-study-image-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.project-placeholder {
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--color-text-secondary);
 }

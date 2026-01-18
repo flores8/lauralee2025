@@ -114,15 +114,20 @@ import Image from 'next/image'
     /about             - About page (with navigation)
     /portfolio         - Portfolio section
       page.js          - Portfolio overview/gallery
-      portfolio-data.js - Project metadata and content
+      portfolio-data.js - Project metadata (title, thesis, role)
+      README.md        - Portfolio structure guide
       /[slug]          - Dynamic project detail pages
+        page.js        - Project router (loads individual case studies)
+        platform-console.js      - Platform console case study content
+        onboarding-at-scale.js   - (Create when ready)
+        permission-aware-systems.js - (Create when ready)
     layout.js          - Layout with Navigation component
   /components          - Shared React components
     Navigation.js      - Top navigation (About | Portfolio)
   globals.css          - Global styles
   layout.js            - Root layout (minimal, no nav)
   page.js              - Home page (minimal, no nav)
-/public                - Static assets (SVGs)
+/public                - Static assets (SVGs only, images are on S3)
 ```
 
 ### Route Architecture
@@ -134,22 +139,26 @@ import Image from 'next/image'
 
 ### Portfolio Data Structure
 
-Portfolio content is managed in `/app/(main)/portfolio/portfolio-data.js`:
+Portfolio projects are split into two parts:
+
+**1. Metadata** (`/app/(main)/portfolio/portfolio-data.js`) - For portfolio landing page:
 
 ```javascript
 {
-  slug: 'project-name',           // URL slug
-  title: 'Project Title',         // Display title
-  tagline: 'Brief description',   // Shown on overview
-  thumbnail: 'S3_URL',            // Overview page image
-  year: '2024',                   // Project year
-  role: 'Staff Product Designer', // Your role
-  description: ['...'],           // Array of paragraphs
-  images: [                       // Full project images
-    { url: 'S3_URL', alt: '...', width: 1200, height: 800 }
-  ]
+  slug: 'platform-console',      // URL slug
+  title: 'Project Title',        // Display title
+  thesis: 'One-sentence thesis', // Shown on overview
+  role: 'Staff Product Designer · CoreWeave', // Your role
 }
 ```
+
+**2. Case Study Content** - Individual component files in `/app/(main)/portfolio/[slug]/`:
+
+- `platform-console.js` - Full case study with thousands of words and images
+- `onboarding-at-scale.js` - (Create as needed)
+- `permission-aware-systems.js` - (Create as needed)
+
+Each case study file is a React component where you write the full narrative with images interspersed throughout using the Next.js Image component with S3 URLs.
 
 ---
 
@@ -173,7 +182,10 @@ npm run lint   # Run ESLint
 5. **Image optimization**: Always use Next.js Image component for photos/graphics
 6. **Content-first**: Design decisions serve the narrative, not the other way around
 7. **Navigation architecture**: Home page remains nav-free; all other pages use the (main) route group layout
-8. **Portfolio updates**: Modify `/app/(main)/portfolio/portfolio-data.js` to add/edit portfolio content
+8. **Portfolio updates**: 
+   - Edit `/app/(main)/portfolio/portfolio-data.js` for metadata (landing page)
+   - Edit individual case study files (e.g., `platform-console.js`) for full content
+   - See `/app/(main)/portfolio/README.md` for detailed guide
 
 ---
 

@@ -1,63 +1,28 @@
-// Portfolio project data
+// Portfolio project metadata (for the portfolio landing page)
+// Full case study content lives in individual [slug]/page.js files
 
 export const projects = [
   {
     slug: 'platform-console',
-    title: 'Designing a scalable platform console',
-    thesis: 'Re-architecting information architecture and workflows to support multiple personas, infrastructure models, and future roadmap growth.',
+    title: 'Re-architecting a platform console for scale',
+    thesis: 'Designing and shipping a foundational information architecture that supports multiple personas, evolving infrastructure models, and future roadmap growth.',
     role: 'Staff Product Designer · CoreWeave',
-    description: [
-      'Full project description paragraph 1...',
-      'Full project description paragraph 2...',
-    ],
-    images: [
-      {
-        url: 'https://your-bucket.s3.amazonaws.com/portfolio/project-1-1.jpg',
-        alt: 'Image description',
-        width: 1200,
-        height: 800,
-      },
-    ],
   },
   {
     slug: 'onboarding-at-scale',
     title: 'Redefining onboarding at scale',
-    thesis: 'Designing a system to surface risk, effort, and ownership across a distributed onboarding process.',
+    thesis: 'Designing a system to surface hidden risk, effort, and ownership across a distributed onboarding experience as CoreWeave scaled.',
     role: 'Staff Product Designer · CoreWeave',
-    description: [
-      'Full project description paragraph 1...',
-      'Full project description paragraph 2...',
-    ],
-    images: [
-      {
-        url: 'https://your-bucket.s3.amazonaws.com/portfolio/project-2-1.jpg',
-        alt: 'Image description',
-        width: 1200,
-        height: 800,
-      },
-    ],
   },
   {
     slug: 'permission-aware-systems',
-    title: 'Designing permission-aware systems',
-    thesis: 'Reframing permissions as a cross-surface communication problem across UI, API, and infrastructure-as-code.',
+    title: 'Designing permission-aware systems across surfaces',
+    thesis: 'Reframing permissions as a platform-wide communication problem spanning console, API, and infrastructure-as-code.',
     role: 'Staff Product Designer · CoreWeave',
-    description: [
-      'Full project description paragraph 1...',
-      'Full project description paragraph 2...',
-    ],
-    images: [
-      {
-        url: 'https://your-bucket.s3.amazonaws.com/portfolio/project-3-1.jpg',
-        alt: 'Image description',
-        width: 1200,
-        height: 800,
-      },
-    ],
   },
 ]
 
-// Helper function to get project by slug
+// Helper function to get project metadata by slug
 export function getProjectBySlug(slug) {
   return projects.find(project => project.slug === slug)
 }

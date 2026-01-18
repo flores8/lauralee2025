@@ -6,7 +6,17 @@ export default function Portfolio() {
     <div className="portfolio-overview">
       <h1>Selected work</h1>
       <p className="portfolio-intro">
-      Platform, systems, and foundational product design.
+      These case studies focus on foundational platform design, system-level UX, and scaling products responsibly.
+      </p>
+      
+      <p className="resume-link">
+        <a 
+          href="https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/lauralee-flores-resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume (PDF) →
+        </a>
       </p>
       
       <div className="portfolio-grid">

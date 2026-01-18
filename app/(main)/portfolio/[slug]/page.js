@@ -1,7 +1,12 @@
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import Link from 'next/link'
 import { getProjectBySlug, getAllProjectSlugs, projects } from '../portfolio-data'
+
+// Import individual project content components
+import PlatformConsole from './platform-console'
+// Import other projects as you create them:
+// import OnboardingAtScale from './onboarding-at-scale'
+// import PermissionAwareSystems from './permission-aware-systems'
 
 // Generate static params for all project pages
 export async function generateStaticParams() {
@@ -11,6 +16,14 @@ export async function generateStaticParams() {
   }))
 }
 
+// Map slugs to their content components
+const projectComponents = {
+  'platform-console': PlatformConsole,
+  // Add other projects here as you create them:
+  // 'onboarding-at-scale': OnboardingAtScale,
+  // 'permission-aware-systems': PermissionAwareSystems,
+}
+
 export default function ProjectPage({ params }) {
   const project = getProjectBySlug(params.slug)
 
@@ -18,6 +31,9 @@ export default function ProjectPage({ params }) {
   if (!project) {
     notFound()
   }
+
+  // Get the content component for this project
+  const ProjectContent = projectComponents[params.slug]
 
   // Get previous/next projects for navigation
   const currentIndex = projects.findIndex(p => p.slug === params.slug)
@@ -35,30 +51,16 @@ export default function ProjectPage({ params }) {
           <h1>{project.title}</h1>
           <div className="project-meta">
             <span>{project.role}</span>
-            <span className="meta-separator">•</span>
-            <span>{project.year}</span>
           </div>
         </header>
 
-        <div className="project-description">
-          {project.description.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </div>
-
-        <div className="project-images">
-          {project.images.map((image, index) => (
-            <div key={index} className="project-image">
-              <Image
-                src={image.url}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </div>
-          ))}
-        </div>
+        {ProjectContent ? (
+          <ProjectContent />
+        ) : (
+          <div className="project-placeholder">
+            <p>This case study is coming soon.</p>
+          </div>
+        )}
       </article>
 
       {(prevProject || nextProject) && (
