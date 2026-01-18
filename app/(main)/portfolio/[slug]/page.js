@@ -24,8 +24,11 @@ const projectComponents = {
   // 'permission-aware-systems': PermissionAwareSystems,
 }
 
-export default function ProjectPage({ params }) {
-  const project = getProjectBySlug(params.slug)
+export default async function ProjectPage({ params }) {
+  // In Next.js 15, params is a Promise and must be awaited
+  const { slug } = await params
+  
+  const project = getProjectBySlug(slug)
 
   // If project not found, show 404
   if (!project) {
@@ -33,10 +36,10 @@ export default function ProjectPage({ params }) {
   }
 
   // Get the content component for this project
-  const ProjectContent = projectComponents[params.slug]
+  const ProjectContent = projectComponents[slug]
 
   // Get previous/next projects for navigation
-  const currentIndex = projects.findIndex(p => p.slug === params.slug)
+  const currentIndex = projects.findIndex(p => p.slug === slug)
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
 
