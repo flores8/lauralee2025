@@ -90,6 +90,8 @@ export default function PermissionAwareSystems() {
       />
 
       <section className="case-study-section">
+        <p><em>Terraform responses followed the same semantic principles, using explicit error states rather than silent failure.</em></p>
+
         <h2>Aligning security, platform, and product around shared semantics</h2>
         <p>This work required close partnership across Platform Engineering, Security, and Product, where permissions had historically been treated as a backend enforcement concern rather than a product communication surface. Early discussions surfaced real tension: increasing visibility risked being interpreted as weakening security, while maintaining silence continued to mislead users.</p>
         <p>Rather than debating individual UI states, I focused alignment on shared principles - separating awareness from action, preserving conservative defaults, and ensuring consistency across surfaces. By grounding decisions in system semantics rather than interface preference, we were able to agree on behaviors that engineers could implement confidently and security could support without exception handling. These principles became the default model for how new capabilities and permissions are introduced across the platform.</p>

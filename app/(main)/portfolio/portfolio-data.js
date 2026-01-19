@@ -3,15 +3,15 @@
 
 export const projects = [
   {
-    slug: 'permission-aware-systems',
-    title: 'Designing permission-aware systems across platform surfaces',
-    thesis: 'Reframing permissions as a platform-wide communication problem spanning console, API, and infrastructure-as-code.',
-    role: 'Staff Product Designer · CoreWeave',
-  },
-  {
     slug: 'platform-console',
     title: 'Re-architecting a platform console for scale',
     thesis: 'Designing and shipping a foundational information architecture that supports multiple personas, evolving infrastructure models, and future roadmap growth.',
+    role: 'Staff Product Designer · CoreWeave',
+  },
+  {
+    slug: 'permission-aware-systems',
+    title: 'Designing permission-aware systems across platform surfaces',
+    thesis: 'Reframing permissions as a platform-wide communication problem spanning console, API, and infrastructure-as-code.',
     role: 'Staff Product Designer · CoreWeave',
   },
   {
