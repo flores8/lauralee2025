@@ -19,7 +19,7 @@ export default function Portfolio() {
         </a>
       </p>
       <div className="how-to-read">
-        <h2>How to read this work</h2>
+        <h2>Overview</h2>
         <p>These projects focus on <span className="bold">system-level design decisions</span> rather than isolated interfaces. Each case study includes a short overview at the top, followed by deeper detail on problem framing, tradeoffs, and long-term impact. Visuals are included where they clarify outcomes, but the emphasis is on how complex platforms are made legible, trustworthy, and scalable over time.</p>
         <p><em> I recommend starting with the overview and diving deeper based on interest.</em></p>
       </div>
