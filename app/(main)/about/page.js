@@ -1,3 +1,6 @@
+import Link from 'next/link'
+
+
 export default function About() {
   return (
     <div className="intro">
@@ -14,6 +17,7 @@ export default function About() {
         <p>Outside of work, I’m a wife and mother of two teenagers. Family life has profoundly shaped how I show up - with patience, empathy, and perspective. The daily practice of listening, adjusting, and choosing kindness carries directly into how I collaborate, mentor, and lead.</p>
         <p>I’m especially excited about this moment in technology. AI is collapsing the distance between idea and execution, and for designers who understand systems, it’s an extraordinary tool - not to replace judgment, but to amplify it. I spend a lot of time experimenting, building, and learning. I'm interested less in speed for its own sake and more in how humans and machines can work together responsibly.</p>
         <p>I’m motivated by work that lasts: thoughtful systems, resilient teams, and products that respect the people who use them.</p>
+        <p><Link href="/portfolio" className="more-link">View selected work →</Link></p>
       </section>
     </div>
   )

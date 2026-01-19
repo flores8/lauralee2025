@@ -6,16 +6,19 @@ export default function PermissionAwareSystems() {
     <div className="case-study">
       <header className="project-header">
         <h1>Designing permission-aware systems across UI, API, and IaC</h1>
-        <p>Reframing permissions from a UI state into a platform-wide communication problem.</p>
+        <p>This work aligned security, platform, and product around shared access semantics, eliminating recurring ambiguity and enabling safer feature rollout at scale.</p>
       </header>
       <section className="case-study-section">
+        <h2>Why this mattered at scale</h2>
+        <ul>
+          <li>Prevented users from misinterpreting restricted access as missing functionality across the console, API, and Terraform.</li>
+          <li>Established shared access semantics that aligned security, platform, and product teams around consistent system behavior.</li>
+          <li>Enabled safer feature rollout at scale by making capability and constraint explicit without weakening security boundaries.</li>
+        </ul>
         <h2>Problem</h2>
         <p>
-        At CoreWeave, permission constraints were not enforced correctly, but communicated poorly. By hiding inaccessible resources entirely, the platform prevented users from understanding what capabilities existed at all. This led customers to assume features were missing, made permission requests vague or misdirected, and quietly suppressed adoption, especially for users interacting primarily through APIs and Terraform.
+        At CoreWeave, permission constraints were enforced correctly, but communicated poorly. By hiding inaccessible resources entirely, the platform prevented users from understanding what capabilities existed at all. This led customers to assume features were missing, made permission requests vague or misdirected, and quietly suppressed adoption, especially for users interacting primarily through APIs and Terraform.
         </p>
-        <h2>Why it mattered</h2>
-        <p>Permissions sit at the intersection of safety, trust, and discoverability. When systems enforce access without explaining constraint, they distort user understanding and undermine confidence. As CoreWeave scaled, this breakdown became systemic: the console, APIs, and infrastructure-as-code tools told inconsistent or silent stories about what the platform could do.</p>
-        <h2>My role and scope</h2>
         <p>As Staff Product Designer (acting design lead), I partnered with Platform Engineering, Security, and Product to redesign how access constraints are communicated across the entire platform, not just the UI, ensuring users could reason accurately about capability without compromising security.</p>
         <h2>Solution (high level)</h2>
         <p>I reframed permissions as a product communication problem, defining cross-surface principles that separate awareness from action. The system now signals that capabilities exist while clearly stating that access is restricted - consistently across the console, API responses, and Terraform - so users understand boundaries without being misled or over-informed.</p>
@@ -51,12 +54,12 @@ export default function PermissionAwareSystems() {
         <p>Just as importantly, the system could not “fix” discoverability by encouraging unsafe behavior. Any increase in visibility had to be paired with equally clear boundaries. The goal was not to help users bypass access controls, but to help them reason accurately about what the platform could do and why certain actions were unavailable.</p>
 
         <h2>Reframing permissions as a platform communication problem</h2>
-        <p>As I examined where confusion surfaced—across the console, API responses, Terraform plans, and support conversations - it became clear that this wasn’t a discoverability or UI-state problem. Permissions were already enforcing what users could and couldn’t do. The failure was in how the platform communicated capability and constraint.</p>
+        <p>As I examined where confusion surfaced - across the console, API responses, Terraform plans, and support conversations - it became clear that this wasn’t a discoverability or UI-state problem. Permissions were already enforcing what users could and couldn’t do. The failure was in how the platform communicated capability and constraint.</p>
         <p>By hiding inaccessible resources entirely, the system collapsed two distinct ideas into one: this doesn’t exist and this exists, but you can’t access it. That ambiguity distorted users’ mental models and led them to draw incorrect conclusions about the platform’s capabilities. In effect, the system was technically correct but communicatively silent.</p>
         <p>Reframing the problem this way shifted the design goal. The objective was no longer to enable action or expose more controls, but to <span className="bold">enable understanding</span>. The platform needed to clearly signal that a capability existed, explicitly state that access was restricted, and do so consistently—whether a user was interacting through the console, an API, or infrastructure-as-code—without implying entitlement or weakening security boundaries.</p>
 
         <h2>Designing a system that communicates constraint without erasing capability</h2>
-        <p>Once the problem was reframed, the solution could not be a single pattern or UI change. It needed to be a set of <span className="bold">platform-level principles</span> that governed how permissions communicate across all surfaces—visual and non-visual alike.</p>
+        <p>Once the problem was reframed, the solution could not be a single pattern or UI change. It needed to be a set of <span className="bold">platform-level principles</span> that governed how permissions communicate across all surfaces, visual and non-visual alike.</p>
 
         <h3>1. Reveal existence without implying entitlement</h3>
         <p>The most important distinction was separating <span className="bold">awareness</span> from <span className="bold">action</span>. Rather than hiding inaccessible capabilities entirely, the system needed to acknowledge that they existed while remaining explicit that the user could not act on them.</p>
@@ -64,14 +67,14 @@ export default function PermissionAwareSystems() {
         <p>This preserved security boundaries while correcting a critical gap in understanding. Users could reason about what the platform offered without being misled into thinking access was accidental, temporary, or negotiable.</p>
 
         <h3>2. Tune disclosure by context, not by role</h3>
-        <p>A tempting approach was to vary behavior based on user roles—show more to admins, less to everyone else. In practice, this broke down quickly. Roles varied across organizations, automation often ran under service accounts, and assumptions about who “should” understand the system rarely held.</p>
+        <p>A tempting approach was to vary behavior based on user roles: show more to admins, less to everyone else. In practice, this broke down quickly. Roles varied across organizations, automation often ran under service accounts, and assumptions about who “should” understand the system rarely held.</p>
         <p>Instead, disclosure was tuned by <span className="bold">interaction context</span>. In the console, where visual affordances and progressive disclosure were available, explanations could be brief and situational. In APIs and infrastructure-as-code, clarity needed to come from explicit errors and response semantics.</p>
         <p>What mattered was not uniform presentation, but uniform intent. Regardless of surface, the system needed to answer the same questions: Does this capability exist? Is it restricted? And what does that mean right now?</p>
 
         <h3>3. Design for users who never see the UI</h3>
         <p>A critical realization was that many CoreWeave users would never encounter these access states in the console at all. For them, the platform existed entirely through APIs, Terraform, and automation.</p>
         <p>This required treating non-UI touch points as first-class UX surfaces. API errors, Terraform plan outputs, and validation messages were intentionally designed to carry the same meaning as the console: clearly signaling that a capability existed, explicitly stating that access was restricted, and avoiding language that implied misconfiguration or transient failure.</p>
-        <p>Silence in these contexts was not neutral—it actively misled users. By designing access behavior at the platform level, permissions became a property of the system itself rather than an artifact of any single interface.</p>
+        <p>Silence in these contexts was not neutral, it actively misled users. By designing access behavior at the platform level, permissions became a property of the system itself rather than an artifact of any single interface.</p>
 
         <h2>How the principles showed up across the platform</h2>
         <p>These principles were applied consistently across the console and non-UI surfaces. While the specific presentation varied by context, the intent remained the same: acknowledge capability, state restriction clearly, and avoid implying entitlement or error.</p>
@@ -89,7 +92,7 @@ export default function PermissionAwareSystems() {
       <section className="case-study-section">
         <h2>Aligning security, platform, and product around shared semantics</h2>
         <p>This work required close partnership across Platform Engineering, Security, and Product, where permissions had historically been treated as a backend enforcement concern rather than a product communication surface. Early discussions surfaced real tension: increasing visibility risked being interpreted as weakening security, while maintaining silence continued to mislead users.</p>
-        <p>Rather than debating individual UI states, I focused alignment on shared principles—separating awareness from action, preserving conservative defaults, and ensuring consistency across surfaces. By grounding decisions in system semantics rather than interface preference, we were able to agree on behaviors that engineers could implement confidently and security could support without exception handling. These principles became the default model for how new capabilities and permissions are introduced across the platform.</p>
+        <p>Rather than debating individual UI states, I focused alignment on shared principles - separating awareness from action, preserving conservative defaults, and ensuring consistency across surfaces. By grounding decisions in system semantics rather than interface preference, we were able to agree on behaviors that engineers could implement confidently and security could support without exception handling. These principles became the default model for how new capabilities and permissions are introduced across the platform.</p>
 
         <h2>Outcomes: measuring success through understanding</h2>
         <p>The success of this work was measured less by feature usage and more by whether users and teams could reason accurately about the platform’s capabilities and constraints.</p>
@@ -103,9 +106,9 @@ export default function PermissionAwareSystems() {
         <p>Internally, permissions became easier to reason about across teams. The platform now communicated consistent intent regardless of surface, reducing one-off explanations and making access behavior predictable as the system evolved.</p>
 
         <h2>Designing systems that tell the truth</h2>
-        <p>This work reshaped how I think about design in complex platforms. Permissions are one of the clearest places where systems reveal whether they are telling the truth. When designed poorly, they distort understanding and quietly undermine trust. When designed well, they allow users to reason accurately about what is possible—even when the answer is not for you.</p>
+        <p>This work reshaped how I think about design in complex platforms. Permissions are one of the clearest places where systems reveal whether they are telling the truth. When designed poorly, they distort understanding and quietly undermine trust. When designed well, they allow users to reason accurately about what is possible, even when the answer is not for you.</p>
         <p>By treating permissions as a product communication problem rather than a UI state, the platform became more honest. Users could distinguish between missing capability and restricted access. Engineers could introduce new features without hiding them behind silence. And the system could enforce boundaries without misleading the people interacting with it.</p>
-        <p>I now carry this principle into all platform work: <span className="bold">design is responsible not just for usability, but for how systems explain themselves—especially where constraints, safety, and trust intersect.</span></p>
+        <p>I now carry this principle into all platform work: <span className="bold">design is responsible not just for usability, but for how systems explain themselves - especially where constraints, safety, and trust intersect.</span></p>
 
 
       </section>
