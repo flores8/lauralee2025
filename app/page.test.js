@@ -49,11 +49,11 @@ describe('Home', () => {
     expect(screen.getByText(/CoreWeave/)).toBeInTheDocument()
   })
 
-  it('renders exactly two paragraphs', () => {
+  it('renders exactly three paragraphs', () => {
     const { container } = render(<Home />)
     
     const paragraphs = container.querySelectorAll('p')
-    expect(paragraphs).toHaveLength(2)
+    expect(paragraphs).toHaveLength(3)
   })
 
   it('renders one heading', () => {
@@ -61,5 +61,13 @@ describe('Home', () => {
     
     const headings = container.querySelectorAll('h1')
     expect(headings).toHaveLength(1)
+  })
+
+  it('renders portfolio link with correct href', () => {
+    render(<Home />)
+    
+    const portfolioLink = screen.getByRole('link', { name: /View selected work/ })
+    expect(portfolioLink).toBeInTheDocument()
+    expect(portfolioLink).toHaveAttribute('href', '/portfolio')
   })
 })

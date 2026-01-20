@@ -34,8 +34,40 @@ Tests for the home page component covering:
 - Second paragraph content (professional description)
 - CoreWeave mention
 - Intro div structure
-- Paragraph count (2 paragraphs)
+- Paragraph count (3 paragraphs)
 - Heading count (1 heading)
+- Portfolio link verification
+
+### Navigation Tests (`app/components/Navigation.test.js`)
+
+Tests for the navigation component covering:
+- All navigation links render (Home, About, Portfolio)
+- Navigation is wrapped in nav element
+- Link hrefs point to correct routes
+- Active state logic:
+  - Home active when on `/`
+  - About active when on `/about`
+  - Portfolio active when on `/portfolio` or any nested portfolio route
+- Client-side pathname detection
+
+### Portfolio Tests (`app/(main)/portfolio/page.test.js`)
+
+Tests for the portfolio landing page covering:
+- Main heading and introduction text
+- Overview section
+- Resume link with correct href and target attributes
+- Project cards rendering from portfolio data
+- Project titles, thesis statements, and roles
+- Case study links with correct hrefs for each project
+- Portfolio grid and container structure
+
+### About Page Tests (`app/(main)/about/page.test.js`)
+
+Tests for the about page covering:
+- Main heading
+- Key content sections (design philosophy, professional background, family, AI)
+- Portfolio link verification
+- Intro div structure
 
 ## Configuration
 
@@ -67,5 +99,9 @@ Current coverage includes:
 - ✅ RootLayout component structure and children
 - ✅ RootLayout metadata
 - ✅ Home component content and structure
+- ✅ Navigation component with active state logic
+- ✅ Portfolio page with project data rendering
+- ✅ About page content
+- ✅ Link verification across pages
 
 To add more coverage, create test files with `.test.js` extension next to the components you want to test.
