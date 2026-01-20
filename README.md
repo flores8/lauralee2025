@@ -1,31 +1,25 @@
-# lauraleeflores.com
+# Personal Portfolio Website
 
-> The quiet center of everything I do.
+This repository contains the source code for my personal website and portfolio:  
+https://www.lauraleeflores.com
 
-This site is my digital monograph, a place to share the full story behind my work, my values, and the thread that connects it all. Unlike my [portfolio](https://lauralee.design) or [creative playground](https://lauralee.space), this space is built for stillness and clarity. It’s not designed to impress, it’s designed to resonate.
+The site highlights a selection of my work as a Staff Product Designer focused on platform and systems design, including case studies that explore system-level decision-making, cross-surface workflows, and designing for scale, clarity, and trust.
 
-- **lauraleeflores.com** is the narrative core, the context that gives meaning to all my other work.  
-- Built with intentional minimalism and a focus on elegant typography, refined spacing, and narrative flow.  
-- Serves as a personal compass, pointing outward to my other sites while grounding visitors in who I am.
+## Purpose
 
----
+This repository exists primarily to support the site itself. The work showcased on the website is the primary artifact; the code here reflects the structure and implementation needed to publish and maintain it.
 
-### ✨ Design Philosophy
+## About the implementation
 
-The interface disappears so the story can speak.
+- Built with modern web tooling (Next.js with static generation, component-based content)
+- Content-first structure to support long-form case studies
+- Designed for clarity, durability, and ease of iteration rather than novelty
 
-- Ultra-minimal and editorial, inspired by quiet print design  
-- Warm serif headlines and soft color palette (`#FAF8F6`, `#2D2A26`, `#D6CCC2`)  
-- Subtle, imperceptible motion to create grace, not distraction  
+While I’m not a software engineer, I’m comfortable working close to code and collaborating on implementation details where it helps clarify system behavior or design intent.
 
----
+## More about my work
 
-### 🗺️ Structure
+- Portfolio & case studies: https://www.lauraleeflores.com
+- Background: Platform and systems design, developer and enterprise tooling, infrastructure-adjacent products
 
-- **Home** – A gentle introduction  
-- **About** – A deeper narrative, beyond the resume  
-- **Links** – Pathways to [lauralee.design](https://lauralee.design) and [lauralee.space](https://lauralee.space)  
-
----
-
-This repository contains the code behind the experience, but the intention is human, this site is where I get to be whole.
+This repository is intentionally minimal and focused. Most of the design thinking lives in the case studies themselves.
