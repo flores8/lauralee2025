@@ -1,5 +1,6 @@
 import './globals.css'
 import Navigation from './components/Navigation'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Lauralee Flores — Systems & Platform Product Designer',
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
+        <Analytics />
       </body>
     </html>
   )
