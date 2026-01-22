@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Lauralee Flores — Systems & Platform Product Designer',
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
             <p>© {new Date().getFullYear()} Lauralee</p>
           </footer>
         </div>
+        <Analytics />
       </body>
     </html>
   )
