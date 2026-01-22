@@ -1,6 +1,6 @@
 import './globals.css'
 import Navigation from './components/Navigation'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   title: 'Lauralee Flores — Systems & Platform Product Designer',
