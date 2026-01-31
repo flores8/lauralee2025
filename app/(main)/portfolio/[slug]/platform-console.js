@@ -14,6 +14,8 @@ export default function PlatformConsole() {
           <li>Rapid expansion of product lines and customer volume meant structural ambiguity could no longer be absorbed through support or institutional knowledge.</li>
           <li>Without a shared product model, each new feature or persona increased risk, slowing execution and eroding trust across the organization.</li>
         </ul>
+        <h2>My role</h2>
+        <p>In response to these scale pressures, I established the shared product model and information architecture for the CoreWeave console; led platform-level design decisions across navigation, workflows, and interaction patterns; partnered with Product and Engineering leadership to align roadmap and system structure.</p>
         <h2>Problem</h2>
         <p>
           CoreWeave’s cloud console was built around Kubernetes and expert infrastructure engineers, making it difficult to use, hard to trust, and increasingly brittle as the platform expanded to enterprise admins, AI practitioners, and bare-metal infrastructure. Customers often avoided the UI in favor of Terraform and custom code, and onboarding relied heavily on human support.
@@ -22,17 +24,16 @@ export default function PlatformConsole() {
         <p>I re-architected the console around a shared, intent-based product model abstracted above Kubernetes, separating infrastructure workflows from organizational and administrative concerns. This created a durable foundation that could support multiple personas and infrastructure models, while supporting continued platform growth without fragmenting the experience.</p>
         <h2>Impact</h2>
         <ul>
-          <li>Established a stable conceptual foundation that aligned product, engineering, and design around future platform expansion.</li>
-          <li>Made the console more legible, predictable, and trustworthy for non-expert users</li>
-          <li>Reduced structural risk as new features, personas, and automation shipped</li>
-          <li>Enabled scalable onboarding, shared design patterns, and future AI-assisted workflows</li>
+          <li><span className="bold">Established a stable foundation for platform expansion</span> - Created structural clarity that allowed the product to grow without accumulating technical or conceptual debt</li>
+          <li><span className="bold">Shifted design from reactive execution to strategic enablement</span> - Transformed how teams collaborated on roadmap decisions and feature planning through shared language and repeatable patterns</li>
+          <li><span className="bold">Made complex infrastructure accessible without sacrificing depth</span> - Enabled non-experts to operate confidently while preserving advanced capabilities for technical users</li>
         </ul>
       </section>
 
       <hr className="case-study-divider" />
 
       <section className="case-study-section">
-        <h2 className="case-study-title">Case study</h2>
+        <h2 className="case-study-title">Deep dive</h2>
         <p><em>Structure, decisions, and outcomes</em></p>
 
         <h2>The problem and why structure was the real constraint</h2>
@@ -41,22 +42,20 @@ export default function PlatformConsole() {
         <p>The issue wasn’t missing features or visual quality. It was structural. Without a stable, user-centered product model, every new addition increased cognitive load and risked fragmenting the experience. Improving onboarding, workflows, or automation without addressing that foundation would have been superficial and fragile at scale.</p>
 
         <h2>Constraints and scale pressures</h2>
-        <p>This work was driven by a growing mismatch between the reality of CoreWeave’s platform and what the console could represent.</p>
         <p>CoreWeave had already expanded beyond Kubernetes to support bare-metal infrastructure, with multiple large customers actively running on bare metal. However, the console was still tightly coupled to Kubernetes-based environments and could not represent bare-metal infrastructure at all. As a result, a meaningful portion of the platform, and some of its most important customers, had no reliable UI surface to view or reason about their infrastructure.</p>
-        <p>At the same time, the company was significantly increasing its investment in the platform itself. CoreWeave was transitioning from serving a small number of high-touch customers to supporting hundreds of customers, while launching multiple new product lines and feature areas in parallel. The console was no longer a supporting tool, it was becoming a core interface through which customers were expected to understand, trust, and operate the platform.</p>
-        <p>These pressures exposed a critical constraint: the existing console structure could not absorb reality. It was tightly coupled to a single infrastructure model, optimized for a narrow persona, and dependent on institutional knowledge and manual support to bridge gaps. Incremental fixes - renaming items, rearranging navigation, or layering features on top - would only deepen the disconnect.</p>
+        <p>At the same time, the company was significantly increasing its investment in the platform itself. CoreWeave was transitioning from serving a small number of high-touch customers to supporting hundreds of customers, while launching multiple new product lines and feature areas in parallel. The console was no longer a supporting tool - it was becoming a core interface through which customers were expected to understand, trust, and operate the platform.</p>
+        <p>These pressures exposed a critical constraint: the existing console structure could not absorb reality. It was tightly coupled to a single infrastructure model, optimized for a narrow persona, and dependent on institutional knowledge and manual support to bridge gaps.</p>
         <p>What was required was a shared, intent-based product model abstracted above any single infrastructure implementation - one capable of representing both Kubernetes and bare metal, supporting rapid roadmap growth, and remaining legible as customer volume and platform responsibility increased.</p>
 
         <h2>Reframing the console around a shared product model</h2>
-        <p>As the scope of the problem became clear, it was evident that the console needed more than a reorganized navigation. It needed a shared product model, one grounded in customer intent rather than internal implementation details, that could serve as a stable foundation for structure, workflows, and future growth.</p>
-        <p>This meant designing above any single infrastructure abstraction. Kubernetes concepts were deeply familiar internally, but anchoring the console’s primary vocabulary to them limited who the product could serve and how it could evolve. By treating Kubernetes-specific constructs as implementation details rather than user-facing primitives, the console could support both Kubernetes and bare metal workloads without forcing users to reason about systems irrelevant to their goals.</p>
-        <p>Reframing the console this way clarified what the product was responsible for communicating. The goal was no longer to expose infrastructure mechanics, but to help users understand what CoreWeave offered, how major capabilities related to one another, and where different types of work belonged. This shared model became the reference point for information architecture, workflow design, and future roadmap decisions.</p>
+        <p>The solution was to design above any single infrastructure abstraction. By treating Kubernetes-specific constructs as implementation details rather than user-facing primitives, the console could support both Kubernetes and bare metal workloads without forcing users to reason about systems irrelevant to their goals.</p>
+        <p>This shared model became the reference point for all structural decisions: information architecture, workflow design, and roadmap planning. The console's responsibility shifted from exposing infrastructure mechanics to helping users understand what CoreWeave offered, how major capabilities related to one another, and where different types of work belonged.</p>
+        <p>This meant intentionally deprioritizing short-term familiarity for Kubernetes experts in favor of a stable, intent-based structure that could support future personas and infrastructure types.  </p>
 
         <h2>Designing a structure that could scale without fragmenting</h2>
-        <p>With a shared product model in place, the next step was to translate that model into a structure users could reliably navigate and reason about. The goal was not to optimize for immediate familiarity, but to establish a hierarchy that would remain legible as the platform continued to grow.</p>
-        <p>The structure moved away from a flat, accumulation-based navigation toward a clear hierarchy that grouped functionality by purpose rather than implementation. Active infrastructure workflows were separated from organizational and administrative concerns, allowing users to quickly orient themselves based on the type of work they were doing rather than the underlying systems involved.</p>
+        <p>The structure grouped functionality by purpose rather than implementation. Active infrastructure workflows were separated from organizational and administrative concerns, allowing users to quickly orient themselves based on the type of work they were doing rather than the underlying systems involved.</p>
         <p>This separation reduced cognitive load in two important ways. First, it clarified what CoreWeave offered at a glance: users could see the major categories of capability without needing deep infrastructure knowledge. Second, it created predictable places for new features to live, so growth no longer required rethinking the entire navigation each time something shipped.</p>
-        <p>Most importantly, the structure was designed to be stable. By anchoring the hierarchy to durable user intent instead of transient system details, the console could absorb new personas, infrastructure types, and product areas without fragmenting the experience or forcing users to relearn where things belonged.</p>
+        <p>By anchoring the hierarchy to durable user intent instead of transient system details, the console could absorb new personas, infrastructure types, and product areas without fragmenting the experience or forcing users to relearn where things belonged.</p>
       </section>
 
       <LightboxImage
@@ -66,14 +65,6 @@ export default function PlatformConsole() {
         height={1000}
         caption="Structural shift: Navigation moved from implementation-first objects to an intent-based product model, clearly separating platform usage from organizational governance and creating a structure that could scale without rework."
       />
-
-      <section className="case-study-section">
-        <h2>From structure to workflows</h2>
-        <p>With a stable product model and structure in place, the next challenge was ensuring that day-to-day workflows would remain consistent as the platform and team scaled. This became especially important as additional designers joined and began working across different product areas in parallel.</p>
-        <p>Early designs surfaced predictable inconsistencies - not due to lack of skill, but because the product previously lacked a shared interaction language. Without clear rules, similar actions were being designed with different patterns, levels of interruption, and permission behavior, creating the risk that the console would fragment again at the workflow level.</p>
-        <p>Rather than correcting individual designs in isolation, I focused on defining shared interaction patterns and decision frameworks that translated the product model into repeatable rules for behavior. These patterns clarified when to use pages versus drawers or modals, how permission-aware states should behave across navigation and actions, and how the system communicates risk, state, and irreversibility. This allowed teams to design independently while still producing coherent, predictable workflows.</p>
-      </section>
-
       <LightboxImage
         src="https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/roadmapped-read-ia.png"
         alt="CoreWeave information architecture as shipped and with roadmapped items"
@@ -83,25 +74,27 @@ export default function PlatformConsole() {
       />
 
       <section className="case-study-section">
-        <h2>Establishing shared foundations as the team scaled</h2>
-        <p>As this work progressed, the design team itself began to scale. I was responsible for onboarding additional product designers and supporting them as they took ownership of different product areas. Rather than acting as a central reviewer or bottleneck, I focused on establishing shared foundations - product models, interaction patterns, and decision principles - that allowed designers to operate independently without reintroducing inconsistency.</p>
-        <p>This shifted how design functioned within the organization. Designers could make confident decisions without needing constant alignment, product and engineering teams gained a clearer understanding of how new work should fit into the platform, and discussions increasingly centered on intent and tradeoffs rather than surface-level preference. The result was a design practice that scaled alongside the product, without sacrificing coherence or velocity.</p>
+        <h2>Scaling design execution through shared patterns</h2>
+        <p>As additional designers joined and began working across different product areas in parallel, early designs surfaced predictable inconsistencies - not due to lack of skill, but because the product previously lacked a shared interaction language. Similar actions were being designed with different patterns, levels of interruption, and permission behavior, creating the risk that the console would fragment at the workflow level.</p>
+        <p>Rather than correcting individual designs in isolation, I defined shared interaction patterns and decision frameworks that translated the product model into repeatable rules for behavior. These patterns clarified when to use pages versus drawers or modals, how permission-aware states should behave across navigation and actions, and how the system communicates risk, state, and irreversibility. This allowed teams to design independently while producing coherent, predictable workflows.</p>
+      </section>
+
+      <section className="case-study-section">
 
         <h2>Outcomes: making the platform legible, trustworthy, and scalable</h2>
-        <p>This work allowed the console to accurately represent the platform as it actually existed, restoring visibility for bare-metal customers and reducing reliance on ad-hoc support for critical infrastructure. It also changed how the console, and future work built on it, could evolve.</p>
-        <p>Following the structural redesign:</p>
+        <p>For users:</p>
         <ul>
-          <li>Users could more easily understand what CoreWeave offered, where different types of work belonged, and which actions were safe to take</li>
-          <li>Enterprise administrators gained a clear, dedicated surface for identity, policy, and billing, reducing confusion and misdirected workflows</li>
-          <li>Infrastructure engineers retained access to advanced capabilities without being forced through implementation-first navigation</li>
-          <li>New product areas could be added without restructuring the console or re-litigating naming and hierarchy decisions</li>
+          <li>Non-expert users could understand what CoreWeave offered and where different types of work belonged without deep infrastructure knowledge</li>
+          <li>Enterprise administrators gained dedicated surfaces for identity, policy, and billing, eliminating misdirected workflows</li>
+          <li>Infrastructure engineers retained access to advanced capabilities without implementation-first navigation</li>
         </ul>
-        <p>Internally, the console gained a shared conceptual foundation. Product, design, and engineering teams could discuss roadmap decisions using consistent language, reducing friction and accelerating execution. What had previously felt brittle and hard to reason about became predictable and extensible.</p>
-
-        <h2>Creating a foundation the platform could grow on</h2>
-        <p>By re-architecting the console around a shared product model, this work created the conditions for CoreWeave to scale without accumulating structural debt. The platform was no longer tightly coupled to a single persona or infrastructure abstraction, allowing new capabilities, workloads, and automation to be introduced without fragmenting the experience.</p>
-        <p>This foundation made higher-order improvements possible. Onboarding, error handling, and permission behavior could now be approached as product problems rather than support burdens. Design patterns and workflows could be reused confidently across teams. And future investments, including AI-assisted experiences, had a stable, legible system to build on rather than amplifying confusion.</p>
-        <p>This work reinforced a principle I now carry into all platform design: when systems grow faster than understanding, structure is not an aesthetic concern - it is the primary lever for trust, scale, and long-term velocity.</p>
+        <p>For the organization:</p>
+        <ul>
+          <li>New product areas, personas, and infrastructure types could be added without restructuring navigation or re-litigating hierarchy decisions</li>
+          <li>Product, design, and engineering teams could discuss roadmap decisions using a shared product language, shifting conversations from implementation details to intent and tradeoffs</li>
+          <li>Design patterns and workflows could be reused confidently across teams without reintroducing inconsistency</li>
+        </ul>
+        <p>By re-architecting the console around a shared product model, this work created the conditions for CoreWeave to scale without accumulating structural debt. The platform was no longer tightly coupled to a single persona or infrastructure abstraction, allowing new capabilities and automation to be introduced without fragmenting the experience. When systems grow faster than understanding, structure becomes the primary lever for trust, scale, and long-term velocity.</p>
       </section>
 
       
