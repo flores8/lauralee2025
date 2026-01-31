@@ -6,7 +6,10 @@ export default function Portfolio() {
     <div className="portfolio-overview">
       <h1>Selected work</h1>
       <p className="portfolio-intro">
-      These case studies focus on foundational platform design, system-level UX, and scaling products responsibly.
+      Designing the abstractions, frameworks, and decision models that make complex platforms scalable.
+      </p>
+      <p className="portfolio-role">
+        I'm a Staff Product Designer and Design Lead at CoreWeave, where I established the design function and led foundational platform work across console, API, and infrastructure products. 
       </p>
       
       <p className="resume-link">
@@ -20,8 +23,7 @@ export default function Portfolio() {
       </p>
       <div className="how-to-read">
         <h2>Overview</h2>
-        <p>These projects focus on <span className="bold">system-level design decisions</span> rather than isolated interfaces. Each case study includes a short overview at the top, followed by deeper detail on problem framing, tradeoffs, and long-term impact. Visuals are included where they clarify outcomes, but the emphasis is on how complex platforms are made legible, trustworthy, and scalable over time.</p>
-        <p><em> I recommend starting with the overview and diving deeper based on interest.</em></p>
+        <p>These projects focus on system-level design decisions rather than isolated interfaces. Each case study includes context on problem framing, design tradeoffs, and long-term impact. I recommend starting with the overview of each project, then diving deeper where the details are most relevant to your team’s challenges. Visuals are included where they clarify outcomes, but the emphasis is on how complex platforms are made legible, trustworthy, and scalable over time.</p>
       </div>
       
       <div className="portfolio-grid">
@@ -38,6 +40,9 @@ export default function Portfolio() {
             </Link>
           </div>
         ))}
+      </div>
+      <div className="portfolio-outro">
+        <p>I’m seeking Principal or Staff+ IC roles focused on platform, infrastructure, or systems design - partnering closely with Product and Engineering leadership to solve problems that compound over time.</p>
       </div>
     </div>
   )
