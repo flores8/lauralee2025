@@ -12,7 +12,7 @@ export default function PlatformConsole() {
         <ul>
           <li>The console no longer accurately represented the platform as it existed, leaving bare-metal customers without a reliable way to understand or operate their infrastructure.</li>
           <li>Rapid expansion of product lines and customer volume meant structural ambiguity could no longer be absorbed through support or institutional knowledge.</li>
-          <li>Without a shared product model, each new feature or persona increased risk, slowing execution and eroding trust across the organization.</li>
+          <li>Without a shared product model, each new feature or persona increased risk and slowed execution across the organization.</li>
         </ul>
         <h2>My role</h2>
         <p>In response to these scale pressures, I established the shared product model and information architecture for the CoreWeave console; led platform-level design decisions across navigation, workflows, and interaction patterns; partnered with Product and Engineering leadership to align roadmap and system structure.</p>
@@ -21,7 +21,7 @@ export default function PlatformConsole() {
           CoreWeave’s cloud console was built around Kubernetes and expert infrastructure engineers, making it difficult to use, hard to trust, and increasingly brittle as the platform expanded to enterprise admins, AI practitioners, and bare-metal infrastructure. Customers often avoided the UI in favor of Terraform and custom code, and onboarding relied heavily on human support.
         </p>
         <h2>Solution (high level)</h2>
-        <p>I re-architected the console around a shared, intent-based product model abstracted above Kubernetes, separating infrastructure workflows from organizational and administrative concerns. This created a durable foundation that could support multiple personas and infrastructure models, while supporting continued platform growth without fragmenting the experience.</p>
+        <p>I re-architected the console around a shared, intent-based product model abstracted above Kubernetes, separating infrastructure workflows from organizational and administrative concerns. This created a durable foundation that could support multiple personas and infrastructure models, while enabling continued platform growth without fragmenting the experience.</p>
         <h2>Impact</h2>
         <ul>
           <li><span className="bold">Established a stable foundation for platform expansion</span> - Created structural clarity that allowed the product to grow without accumulating technical or conceptual debt</li>
@@ -33,7 +33,7 @@ export default function PlatformConsole() {
       <hr className="case-study-divider" />
 
       <section className="case-study-section">
-        <h2 className="case-study-title">Deep dive</h2>
+        <h2 className="case-study-title">Design approach</h2>
         <p><em>Structure, decisions, and outcomes</em></p>
 
         <h2>The problem and why structure was the real constraint</h2>
@@ -44,7 +44,7 @@ export default function PlatformConsole() {
         <h2>Constraints and scale pressures</h2>
         <p>CoreWeave had already expanded beyond Kubernetes to support bare-metal infrastructure, with multiple large customers actively running on bare metal. However, the console was still tightly coupled to Kubernetes-based environments and could not represent bare-metal infrastructure at all. As a result, a meaningful portion of the platform, and some of its most important customers, had no reliable UI surface to view or reason about their infrastructure.</p>
         <p>At the same time, the company was significantly increasing its investment in the platform itself. CoreWeave was transitioning from serving a small number of high-touch customers to supporting hundreds of customers, while launching multiple new product lines and feature areas in parallel. The console was no longer a supporting tool - it was becoming a core interface through which customers were expected to understand, trust, and operate the platform.</p>
-        <p>These pressures exposed a critical constraint: the existing console structure could not absorb reality. It was tightly coupled to a single infrastructure model, optimized for a narrow persona, and dependent on institutional knowledge and manual support to bridge gaps.</p>
+        <p>These pressures exposed a critical constraint: the existing console structure could not absorb the platform as it actually existed. It was tightly coupled to a single infrastructure model, optimized for a narrow persona, and dependent on institutional knowledge and manual support to bridge gaps.</p>
         <p>What was required was a shared, intent-based product model abstracted above any single infrastructure implementation - one capable of representing both Kubernetes and bare metal, supporting rapid roadmap growth, and remaining legible as customer volume and platform responsibility increased.</p>
 
         <h2>Reframing the console around a shared product model</h2>
