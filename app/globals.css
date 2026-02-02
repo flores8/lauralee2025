@@ -503,6 +503,16 @@ main {
   font-size: 1.0625rem;
 }
 
+.case-study-section pre {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 6px;
+  border:1px solid #d6ccc2;
+}
+
 .case-study-divider {
   border: none;            /* remove default */
   height: 1px;
