@@ -25,6 +25,7 @@ export default function OnboardingAtScale() {
 
         <h2>Solution (high level)</h2>
         <p>I reframed onboarding from a linear flow into a distributed system, then designed a repeatable discovery and sense-making framework that continuously surfaced where effort, risk, and misalignment accumulated over time. Rather than prescribing a single solution, the work created a durable way for leadership to see onboarding clearly and make better decisions as conditions changed.</p>
+        <p>The framework itself became a durable system the org continues to use, not a one-time analysis.”</p>
         <h2>Impact</h2>
         <ul>
           <li>Shifted onboarding conversations from reactive fixes to systemic understanding</li>

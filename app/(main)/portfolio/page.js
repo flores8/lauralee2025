@@ -9,7 +9,7 @@ export default function Portfolio() {
       Designing the abstractions, frameworks, and decision models that make complex platforms scalable.
       </p>
       <p className="portfolio-role">
-        I'm a Staff Product Designer and Design Lead at CoreWeave, where I established the design function and led foundational platform work across console, API, and infrastructure products. 
+      I’m seeking Principal or Staff+ IC roles focused on platform, infrastructure, or systems design - partnering closely with Product and Engineering leadership to solve problems that compound over time. 
       </p>
       
       <p className="resume-link">
@@ -41,9 +41,7 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
-      <div className="portfolio-outro">
-        <p>I’m seeking Principal or Staff+ IC roles focused on platform, infrastructure, or systems design - partnering closely with Product and Engineering leadership to solve problems that compound over time.</p>
-      </div>
+      
     </div>
   )
 }
