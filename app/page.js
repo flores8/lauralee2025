@@ -7,7 +7,7 @@ export default function Home() {
       <p>I design platform products that make complex systems legible and scalable through clear abstractions, decision frameworks, and strategic foundations.
       </p>
       <p>
-      I'm a staff product designer leading design at the intersection of infrastructure, AI, and systems design - at CoreWeave, where I established the design function and am leading foundational platform work. I believe the best products come from understanding how systems scale - not just technically, but organizationally - and designing the structures that help teams move faster with clarity.
+      I’m a Staff Product Designer leading design at the intersection of infrastructure, AI, and systems design. At CoreWeave, I established the design function and lead foundational platform work that shapes how the organization builds and scales its products. I focus on designing structures that help teams move faster with clarity - technically <em>and</em> organizationally.
       </p>
       <p><Link href="/portfolio" className="more-link">View systems case studies →</Link></p>
     </div>
