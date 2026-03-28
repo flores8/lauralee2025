@@ -18,8 +18,7 @@ export default function About() {
         <p>I'm especially excited about this moment in technology. AI is collapsing the distance between idea and execution, creating new opportunities for designers who understand systems to amplify judgment rather than replace it.</p>
         <p>Family life has sharpened my ability to navigate complexity, hold multiple perspectives, and make decisions with incomplete information - skills that translate directly into designing systems for diverse users and use cases.</p>
         <p>I'm motivated by work that lasts: thoughtful systems, resilient teams, and products that respect the people who use them. </p>
-        <p>I'm currently seeking Principal or Staff+ IC roles focused on platform, infrastructure, or systems design - where I can partner closely with Product and Engineering leadership to solve problems that compound over time.</p>
-        <p><Link href="/portfolio" className="more-link">View systems case studies →</Link></p>
+<p><Link href="/portfolio" className="more-link">View systems case studies →</Link></p>
       </section>
     </div>
   )

@@ -8,10 +8,6 @@ export default function Portfolio() {
       <p className="portfolio-intro">
       Designing the abstractions, frameworks, and decision models that make complex platforms scalable.
       </p>
-      <p className="portfolio-role">
-      I’m seeking Principal or Staff+ IC roles focused on platform, infrastructure, or systems design - partnering closely with Product and Engineering leadership to solve problems that compound over time. 
-      </p>
-      
       <p className="resume-link">
         <a 
           href="https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/lauralee-flores-resume.pdf"
