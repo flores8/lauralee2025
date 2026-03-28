@@ -3,10 +3,10 @@ import Navigation from './components/Navigation'
 import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
-  title: 'Lauralee Flores — Systems & Platform Product Designer',
+  title: 'Lauralee Flores — Design Leader, Product Experience',
   description: 'Staff product designer focused on system-level UX, platform foundations, and designing products that scale with clarity and trust.',
   openGraph: {
-    title: 'Lauralee Flores — Systems & Platform Product Designer',
+    title: 'Lauralee Flores — Design Leader, Product Experience',
     description: 'Staff product designer focused on system-level UX, platform foundations, and designing products that scale with clarity and trust.',
     url: 'https://lauraleeflores.com',
     siteName: 'Lauralee Flores',
@@ -15,7 +15,7 @@ export const metadata = {
         url: '/og-image.png', // You'll need to add this image to your public folder
         width: 1200,
         height: 630,
-        alt: 'Lauralee Flores — Systems & Platform Product Designer',
+        alt: 'Lauralee Flores — Design Leader, Product Experience',
       },
     ],
     locale: 'en_US',
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lauralee Flores — Systems & Platform Product Designer',
+    title: 'Lauralee Flores — Design Leader, Product Experience',
     description: 'Staff product designer focused on system-level UX, platform foundations, and designing products that scale with clarity and trust.',
     images: ['/og-image.png'], // Same image as Open Graph
   },
