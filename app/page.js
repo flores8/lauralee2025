@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <div className="intro">
       <h1>I'm Lauralee</h1>
-      <p>I design platform products that make complex systems legible and scalable through clear abstractions, decision frameworks, and strategic foundations.
+      <p>I lead product design at CoreWeave, where I built the design function from the ground up and now manage the team responsible for the company's core product experience.
       </p>
       <p>
-      I’m a Staff Product Designer leading design at the intersection of infrastructure, AI, and systems design. At CoreWeave, I established the design function and lead foundational platform work that shapes how the organization builds and scales its products. I focus on designing structures that help teams move faster with clarity - technically <em>and</em> organizationally.
+      My focus is on the problems that sit between teams and systems — where product coherence breaks down as things scale, where someone needs to own the frame before anyone can execute against it, and where design judgment matters more than design output. CoreWeave builds AI infrastructure. The products are complex, the stakes are real, and getting the foundation right actually matters.
       </p>
       <p><Link href="/portfolio" className="more-link">View systems case studies →</Link></p>
     </div>
