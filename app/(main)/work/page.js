@@ -22,8 +22,7 @@ export default function Portfolio() {
           <div key={project.slug} className="portfolio-card">
             <h2>{project.title}</h2>
             <p className="portfolio-card-thesis">{project.thesis}</p>
-            <p className="portfolio-card-role">{project.role}</p>
-            <Link 
+<Link 
               href={`/work/${project.slug}`}
               className="portfolio-card-link"
             >

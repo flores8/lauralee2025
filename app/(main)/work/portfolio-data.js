@@ -4,8 +4,8 @@
 export const projects = [
   {
     slug: 'platform-console',
-    title: 'Re-architecting a platform console for scale',
-    thesis: 'Designing and shipping a foundational information architecture that supports multiple personas, evolving infrastructure models, and future roadmap growth.',
+    title: 'Building a product model that could scale with the platform',
+    thesis: 'CoreWeave\'s console was built for Kubernetes experts. As the platform expanded, that foundation stopped working. I made the call to rebuild above the implementation layer, creating a shared product model that could hold as the company and team scaled.',
     role: 'Platform foundations & information architecture',
   },
   {
