@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }) {
 
   return (
     <div className="project-detail">
-      <Link href="/portfolio" className="back-link">
+      <Link href="/work" className="back-link">
         ← Back to Work
       </Link>
 
