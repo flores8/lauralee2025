@@ -6,7 +6,7 @@ export default function Portfolio() {
     <div className="portfolio-overview">
       <h1>Selected work</h1>
       <p className="portfolio-intro">
-      Designing the abstractions, frameworks, and decision models that make complex platforms scalable.
+      A look at how I approach complex product problems: the framing, the tradeoffs, and what we learned.
       </p>
       <p className="resume-link">
         <a 
