@@ -80,7 +80,7 @@ describe('Portfolio', () => {
       // Verify each project has a corresponding link with correct href
       projects.forEach((project) => {
         const linkWithHref = caseStudyLinks.find(
-          link => link.getAttribute('href') === `/portfolio/${project.slug}`
+          link => link.getAttribute('href') === `/work/${project.slug}`
         )
         expect(linkWithHref).toBeTruthy()
       })

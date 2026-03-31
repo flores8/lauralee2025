@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }) {
   return (
     <div className="project-detail">
       <Link href="/portfolio" className="back-link">
-        ← Back to Portfolio
+        ← Back to Work
       </Link>
 
       <article className="project-content">
@@ -60,13 +60,13 @@ export default async function ProjectPage({ params }) {
       {(prevProject || nextProject) && (
         <nav className="project-navigation">
           {prevProject && (
-            <Link href={`/portfolio/${prevProject.slug}`} className="project-nav-link prev">
+            <Link href={`/work/${prevProject.slug}`} className="project-nav-link prev">
               <span className="nav-label">← Previous</span>
               <span className="nav-title">{prevProject.title}</span>
             </Link>
           )}
           {nextProject && (
-            <Link href={`/portfolio/${nextProject.slug}`} className="project-nav-link next">
+            <Link href={`/work/${nextProject.slug}`} className="project-nav-link next">
               <span className="nav-label">Next →</span>
               <span className="nav-title">{nextProject.title}</span>
             </Link>

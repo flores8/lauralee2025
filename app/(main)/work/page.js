@@ -29,7 +29,7 @@ export default function Portfolio() {
             <p className="portfolio-card-thesis">{project.thesis}</p>
             <p className="portfolio-card-role">{project.role}</p>
             <Link 
-              href={`/portfolio/${project.slug}`}
+              href={`/work/${project.slug}`}
               className="portfolio-card-link"
             >
               View case study →

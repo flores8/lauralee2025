@@ -13,7 +13,7 @@ export default function About() {
         <p>My background is in research. I trained in Human-Computer Interaction and psychology, and spent the early part of my career studying how people make sense of complex systems before I got restless and wanted to shape them instead. That instinct stayed with me. The most important design work still happens before anyone opens a tool: in how you frame the problem, what constraints you name, and what you decide not to solve.</p>
         <p>That framing instinct extends to how I think about teams. Good work requires trust, and trust requires clarity about who owns what, what we're optimizing for, and what we're willing to give up. I try to make those things explicit rather than leaving them to assumption.</p>
         <p>Which brings me to the harder question about where all of this is going. After four years inside AI products, I think the honest version is more disruptive than most designers want to say out loud. The roles we think of as product, design, and engineering are going to collapse into fewer, different things. What won't go away is the judgment about what gets built and the judgment about what it should feel like to use. Those decisions still require a person. Everything else is becoming infrastructure.</p>
-<p><Link href="/portfolio" className="more-link">View selected work →</Link></p>
+<p><Link href="/work" className="more-link">View selected work →</Link></p>
       </section>
     </div>
   )

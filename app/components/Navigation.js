@@ -8,7 +8,7 @@ export default function Navigation() {
   
   const isHomeActive = pathname === '/'
   const isAboutActive = pathname === '/about'
-  const isPortfolioActive = pathname.startsWith('/portfolio')
+  const isWorkActive = pathname.startsWith('/work')
 
   return (
     <nav className="top-nav">
@@ -20,8 +20,8 @@ export default function Navigation() {
         About
       </Link>
       {/* <span className="nav-separator">|</span> */}
-      <Link href="/portfolio" className={isPortfolioActive ? 'active' : ''}>
-        Portfolio
+      <Link href="/work" className={isWorkActive ? 'active' : ''}>
+        Work
       </Link>
     </nav>
   )

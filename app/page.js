@@ -9,7 +9,7 @@ export default function Home() {
       <p>
       My focus is on the problems that sit between teams and systems: the places where product coherence quietly breaks down as things scale, where someone has to own the frame before execution can start, and where design judgment does more work than design output. CoreWeave builds AI infrastructure. These are complex, high-stakes products, and the foundation has to hold.
       </p>
-      <p><Link href="/portfolio" className="more-link">View selected work →</Link></p>
+      <p><Link href="/work" className="more-link">View selected work →</Link></p>
     </div>
   )
 }

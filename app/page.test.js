@@ -68,6 +68,6 @@ describe('Home', () => {
     
     const portfolioLink = screen.getByRole('link', { name: /View selected work/ })
     expect(portfolioLink).toBeInTheDocument()
-    expect(portfolioLink).toHaveAttribute('href', '/portfolio')
+    expect(portfolioLink).toHaveAttribute('href', '/work')
   })
 })
