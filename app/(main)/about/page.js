@@ -8,17 +8,12 @@ export default function About() {
       
       <section style={{ marginTop: '3rem', marginBottom: '3rem' }}>
         {/* <h2>The craft</h2> */}
-        <p>
-        I'm a Staff Product Designer specializing in platform and infrastructure systems - designing the abstractions, frameworks, and foundations that help complex technical products scale.
-        </p>
-        <p>I began my career in user research with training in Human–Computer Interaction and psychology. Over time I grew restless: I wanted to not only study systems, but shape them. I transitioned into product design, bringing that systems lens with me where thinking, making, and problem-solving coexist.</p>
-        <p>At CoreWeave, I established the design function and lead foundational platform work that shapes how the company thinks about AI infrastructure products. Today, my work focuses on designing platform systems that make complex technology legible, scalable, and trustworthy. I'm drawn to problems where structure matters where the right abstraction or framework can unlock teams and products.</p>
-        <p>Although my scope has included design leadership, my work has remained deeply hands-on — owning system design, interaction models, and platform foundations, and using leadership authority to remove structural drag rather than step away from design.</p>
-        <p>My approach balances strategic systems thinking with hands-on execution, always asking: what needs to exist for this to scale well? I believe the best design is often invisible, felt rather than noticed. And I care deeply about how teams work together: clarity and rigor don't require cruelty, and trust is a prerequisite for good work.</p>
-        <p>I'm especially excited about this moment in technology. AI is collapsing the distance between idea and execution, creating new opportunities for designers who understand systems to amplify judgment rather than replace it.</p>
-        <p>Family life has sharpened my ability to navigate complexity, hold multiple perspectives, and make decisions with incomplete information - skills that translate directly into designing systems for diverse users and use cases.</p>
-        <p>I'm motivated by work that lasts: thoughtful systems, resilient teams, and products that respect the people who use them. </p>
-<p><Link href="/portfolio" className="more-link">View systems case studies →</Link></p>
+        <p>I'm a design leader at CoreWeave, where I built the design function from scratch and now lead the team responsible for the company's core product experience. That means hiring and developing designers, setting direction across a complex product surface, and making sure the experience holds together as the company scales.</p>
+        <p>Before CoreWeave I was at Weights & Biases, working on tooling for ML practitioners at a time when most people outside the field weren't paying close attention to what was coming. I've been thinking about AI and what it does to products, and to the people building them, for four years now. That context shapes how I work.</p>
+        <p>My background is in research. I trained in Human-Computer Interaction and psychology, and spent the early part of my career studying how people make sense of complex systems before I got restless and wanted to shape them instead. That instinct stayed with me. The most important design work still happens before anyone opens a tool: in how you frame the problem, what constraints you name, and what you decide not to solve.</p>
+        <p>That framing instinct extends to how I think about teams. Good work requires trust, and trust requires clarity about who owns what, what we're optimizing for, and what we're willing to give up. I try to make those things explicit rather than leaving them to assumption.</p>
+        <p>Which brings me to the harder question about where all of this is going. After four years inside AI products, I think the honest version is more disruptive than most designers want to say out loud. The roles we think of as product, design, and engineering are going to collapse into fewer, different things. What won't go away is the judgment about what gets built and the judgment about what it should feel like to use. Those decisions still require a person. Everything else is becoming infrastructure.</p>
+<p><Link href="/portfolio" className="more-link">View selected work →</Link></p>
       </section>
     </div>
   )
