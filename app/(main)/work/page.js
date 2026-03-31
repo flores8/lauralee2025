@@ -17,12 +17,7 @@ export default function Portfolio() {
           Resume (PDF) →
         </a>
       </p>
-      <div className="how-to-read">
-        <h2>Overview</h2>
-        <p>These projects focus on system-level design decisions rather than isolated interfaces. Each case study includes context on problem framing, design tradeoffs, and long-term impact. I recommend starting with the overview of each project, then diving deeper where the details are most relevant to your team’s challenges. Visuals are included where they clarify outcomes, but the emphasis is on how complex platforms are made legible, trustworthy, and scalable over time.</p>
-      </div>
-      
-      <div className="portfolio-grid">
+<div className="portfolio-grid">
         {projects.map((project) => (
           <div key={project.slug} className="portfolio-card">
             <h2>{project.title}</h2>
