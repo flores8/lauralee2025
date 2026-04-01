@@ -16,8 +16,8 @@ export const projects = [
   },
   {
     slug: 'onboarding-at-scale',
-    title: 'Redefining onboarding at scale',
-    thesis: 'Designing a system to surface hidden risk, effort, and ownership across a distributed onboarding experience as CoreWeave scales.',
+    title: 'Making onboarding visible at scale',
+    thesis: 'CoreWeave\'s onboarding worked because people absorbed the friction manually. As the company scaled, that stopped being viable. I reframed onboarding as a distributed system, built a discovery and measurement framework to surface where risk and effort actually lived, and now report on CSAT performance directly to VP leadership.',
     role: 'Distributed onboarding systems & risk visibility',
   },
   
