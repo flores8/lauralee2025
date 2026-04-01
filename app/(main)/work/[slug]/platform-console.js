@@ -2,7 +2,7 @@ export default function PlatformConsole() {
   return (
     <div className="case-study">
       <header className="project-header">
-        <h1>Designing a scalable cloud console for a growing infra platform</h1>
+        <h1>Building a product model that could scale with the platform</h1>
       </header>
       <section className="case-study-section">
         <p>CoreWeave's console was built around Kubernetes and a narrow set of infrastructure experts. As the platform expanded to enterprise admins, AI practitioners, and bare-metal customers, that foundation stopped working. Customers avoided the UI in favor of Terraform and custom scripts. Onboarding required significant human support. New features made things denser without making them clearer.</p>
