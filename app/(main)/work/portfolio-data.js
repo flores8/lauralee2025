@@ -10,8 +10,8 @@ export const projects = [
   },
   {
     slug: 'permission-aware-systems',
-    title: 'Designing permission-aware systems across platform surfaces',
-    thesis: 'Reframing permissions as a platform-wide communication problem spanning console, API, and infrastructure-as-code.',
+    title: 'Reframing access as a platform communication problem',
+    thesis: 'CoreWeave\'s permission system enforced access correctly but communicated nothing. Users assumed features were missing. I reframed it as a platform communication problem, aligned Security, Product, and Platform Engineering around a shared principle, and led my team through execution across console, API, and Terraform.',
     role: 'Cross-surface policy and mental models',
   },
   {
