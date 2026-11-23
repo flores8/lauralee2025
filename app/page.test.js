@@ -2,33 +2,27 @@ import { render, screen } from '@testing-library/react'
 import Home from './page'
 
 describe('Home', () => {
-  it('renders the heading "I\'m Lauralee"', () => {
+  it('renders the full name in the heading', () => {
     render(<Home />)
     
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent("I'm Lauralee")
+    expect(heading).toHaveTextContent('I’m Lauralee Flores')
   })
 
-  it('renders the first paragraph about designing platform products', () => {
+  it('describes Lauralee’s design leadership at CoreWeave', () => {
     render(<Home />)
     
-    const paragraph = screen.getByText(/I design platform products that make complex systems legible and scalable/)
-    expect(paragraph).toBeInTheDocument()
+    const paragraph = screen.getByText(/I built CoreWeave’s product design function from the ground up/)
+    expect(paragraph).toHaveTextContent('I lead four Staff designers')
   })
 
-  it('renders the second paragraph with professional description', () => {
+  it('links the cross-team permissions example to the case study', () => {
     render(<Home />)
     
-    const paragraph = screen.getByText(/I'm a staff product designer working at the intersection/)
-    expect(paragraph).toBeInTheDocument()
-  })
-
-  it('includes mention of CoreWeave in the description', () => {
-    render(<Home />)
-    
-    const text = screen.getByText(/CoreWeave/)
-    expect(text).toBeInTheDocument()
+    const link = screen.getByRole('link', { name: 'permissions work' })
+    expect(link).toHaveAttribute('href', '/work/permission-aware-systems')
+    expect(link.closest('p')).toHaveTextContent('problems that sit between teams and systems')
   })
 
   it('renders content within an intro div', () => {
@@ -36,17 +30,6 @@ describe('Home', () => {
     
     const introDiv = container.querySelector('.intro')
     expect(introDiv).toBeInTheDocument()
-  })
-
-  it('renders all expected text content', () => {
-    render(<Home />)
-    
-    // Check for key phrases
-    expect(screen.getByText("I'm Lauralee")).toBeInTheDocument()
-    expect(screen.getByText(/design platform products/)).toBeInTheDocument()
-    expect(screen.getByText(/staff product designer/)).toBeInTheDocument()
-    expect(screen.getByText(/infrastructure, AI, and systems design/)).toBeInTheDocument()
-    expect(screen.getByText(/CoreWeave/)).toBeInTheDocument()
   })
 
   it('renders exactly three paragraphs', () => {

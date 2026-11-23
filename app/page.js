@@ -3,11 +3,13 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className="intro">
-      <h1>I'm Lauralee</h1>
-      <p>I lead product design at CoreWeave, where I built the design function from the ground up and now manage the team responsible for the company's core product experience.
+      <h1>I’m Lauralee Flores</h1>
+      <p>
+        I built CoreWeave’s product design function from the ground up. Today I lead four Staff designers working on our core AI infrastructure products.
       </p>
       <p>
-      My focus is on the problems that sit between teams and systems: the places where product coherence quietly breaks down as things scale, where someone has to own the frame before execution can start, and where design judgment does more work than design output. CoreWeave builds AI infrastructure. These are complex, high-stakes products, and the foundation has to hold.
+        I focus on the problems that sit between teams and systems. In our{' '}
+        <Link href="/work/permission-aware-systems">permissions work</Link>, I helped Security, Product, and Platform Engineering agree on how to make restricted capabilities visible to customers while keeping access rules in place.
       </p>
       <p><Link href="/work" className="more-link">View selected work →</Link></p>
     </div>
