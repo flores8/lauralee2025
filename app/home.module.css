@@ -32,11 +32,18 @@
   color: #FAF8F6;
 }
 
-.secondary:hover,
-.secondary:focus-visible {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+.secondary {
+  position: relative;
+}
+
+.secondary:hover::after,
+.secondary:focus-visible::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: calc(50% + 0.65em);
+  border-bottom: 1px solid #D6CCC2;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
