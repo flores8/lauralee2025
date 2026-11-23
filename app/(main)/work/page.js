@@ -9,12 +9,16 @@ export default function Portfolio() {
       A look at how I approach complex product problems: the framing, the tradeoffs, and what we learned.
       </p>
       <p className="resume-link">
-        <a 
-          href="https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/lauralee-flores-resume.pdf"
+        <a
+          href="/resume/lauralee-flores-resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
           Resume (PDF) →
+        </a>
+        <br />
+        <a href="/resume/lauralee-flores-resume.docx" download>
+          Download Word version (DOCX)
         </a>
       </p>
 <div className="portfolio-grid">

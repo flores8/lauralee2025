@@ -27,14 +27,17 @@ describe('Portfolio', () => {
     expect(overviewText).toBeInTheDocument()
   })
 
-  it('renders resume link with correct href', () => {
+  it('links to the PDF and Word versions of the resume', () => {
     render(<Portfolio />)
-    
-    const resumeLink = screen.getByRole('link', { name: /Resume \(PDF\)/ })
-    expect(resumeLink).toBeInTheDocument()
-    expect(resumeLink).toHaveAttribute('href', 'https://lauraleeflores-com-website.s3.us-east-2.amazonaws.com/lauralee-flores-resume.pdf')
-    expect(resumeLink).toHaveAttribute('target', '_blank')
-    expect(resumeLink).toHaveAttribute('rel', 'noopener noreferrer')
+
+    const pdfLink = screen.getByRole('link', { name: /Resume \(PDF\)/ })
+    expect(pdfLink).toHaveAttribute('href', '/resume/lauralee-flores-resume.pdf')
+    expect(pdfLink).toHaveAttribute('target', '_blank')
+    expect(pdfLink).toHaveAttribute('rel', 'noopener noreferrer')
+
+    const wordLink = screen.getByRole('link', { name: 'Download Word version (DOCX)' })
+    expect(wordLink).toHaveAttribute('href', '/resume/lauralee-flores-resume.docx')
+    expect(wordLink).toHaveAttribute('download')
   })
 
   describe('Project cards', () => {
