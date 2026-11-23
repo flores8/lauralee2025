@@ -10,21 +10,6 @@ describe('Home', () => {
     expect(heading).toHaveTextContent('I’m Lauralee Flores')
   })
 
-  it('describes Lauralee’s design leadership at CoreWeave', () => {
-    render(<Home />)
-    
-    const paragraph = screen.getByText(/I built CoreWeave’s product design function from the ground up/)
-    expect(paragraph).toHaveTextContent('I lead four Staff designers')
-  })
-
-  it('links the cross-team permissions example to the case study', () => {
-    render(<Home />)
-    
-    const link = screen.getByRole('link', { name: 'permissions work' })
-    expect(link).toHaveAttribute('href', '/work/permission-aware-systems')
-    expect(link.closest('p')).toHaveTextContent('problems that sit between teams and systems')
-  })
-
   it('renders content within an intro div', () => {
     const { container } = render(<Home />)
     
@@ -32,11 +17,15 @@ describe('Home', () => {
     expect(introDiv).toBeInTheDocument()
   })
 
-  it('renders exactly three paragraphs', () => {
+  it('leads with team building and ends the intro with an invitation to compare notes', () => {
     const { container } = render(<Home />)
-    
-    const paragraphs = container.querySelectorAll('p')
-    expect(paragraphs).toHaveLength(3)
+
+    const paragraphs = [...container.querySelectorAll('p')].map((paragraph) => paragraph.textContent)
+    expect(paragraphs).toEqual([
+      'I build design teams and research practices. I love helping people grow into roles where they can lead more of the work.',
+      'At CoreWeave, I started the product design function and now lead four Staff designers. I also hired a Staff UX Researcher, and we’re building a practice that brings customer research into more product decisions.',
+      'If you’re building a design or research team in a complex product organization, I’d love to compare notes on how you give people room to lead.',
+    ])
   })
 
   it('renders one heading', () => {
@@ -46,11 +35,20 @@ describe('Home', () => {
     expect(headings).toHaveLength(1)
   })
 
-  it('renders portfolio link with correct href', () => {
+  it('puts LinkedIn first and Selected Work second directly after the invitation', () => {
     render(<Home />)
-    
-    const portfolioLink = screen.getByRole('link', { name: /View selected work/ })
-    expect(portfolioLink).toBeInTheDocument()
-    expect(portfolioLink).toHaveAttribute('href', '/work')
+
+    const invitation = screen.getByText(/I’d love to compare notes/)
+    const links = screen.getAllByRole('link')
+    const linkedin = screen.getByRole('link', { name: 'Connect on LinkedIn' })
+    const work = screen.getByRole('link', { name: 'View selected work' })
+
+    expect(links).toEqual([linkedin, work])
+    expect(invitation.nextElementSibling).toContainElement(linkedin)
+    expect(invitation.nextElementSibling).toContainElement(work)
+    expect(linkedin).toHaveAttribute('href', 'https://www.linkedin.com/in/lauraleeflores')
+    expect(work).toHaveAttribute('href', '/work')
+    expect(linkedin).toHaveTextContent('↗')
+    expect(work).toHaveTextContent('→')
   })
 })
