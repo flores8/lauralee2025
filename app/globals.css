@@ -56,6 +56,20 @@ a:hover {
   color: #445163;
 }
 
+a:focus-visible {
+  outline: 2px solid #445163;
+  outline-offset: 4px;
+}
+
+.resume-link a:hover,
+.resume-link a:focus-visible,
+.portfolio-card-link:hover,
+.portfolio-card-link:focus-visible {
+  text-decoration: underline #D6CCC2;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
 /* Layout */
 .container {
   max-width: 650px;
@@ -73,19 +87,13 @@ a:hover {
 }
 
 .top-nav a {
-  opacity: 0.6;
   margin-right: 2rem;
-  transition: opacity 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
-.top-nav a:hover {
-  opacity: 1;
-}
-
 .top-nav a.active {
-  opacity: 1;
+  color: #445163;
   border-bottom: 1px solid #D6CCC2;
   padding-bottom: 2px;
 }
@@ -173,14 +181,7 @@ main {
 }
 
 .resume-link a {
-  color: #5d6b85;
-  opacity: 0.6;
   font-size: 1.1rem;
-  transition: 0.2s ease;
-}
-
-.resume-link a:hover {
-  opacity: 1;
 }
 
 .how-to-read {
@@ -215,6 +216,11 @@ main {
   margin-bottom: 0.75rem;
 }
 
+.portfolio-card-arrow {
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
 .portfolio-card-thesis {
   line-height: 1.5;
   font-size: 1.2rem;
@@ -228,18 +234,6 @@ main {
   margin-bottom: 0.75rem;
   opacity: 0.8;
   color: #2d2a26;
-}
-
-.portfolio-card-link {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-  color: #5d6b85;
-  opacity: 0.6;
-  transition: 0.2s ease;
-}
-
-.portfolio-card-link:hover {
-  opacity: 1;
 }
 
 .portfolio-card-image {
@@ -285,13 +279,7 @@ main {
 .back-link {
   display: inline-block;
   font-size: 0.9rem;
-  opacity: 0.6;
   margin-bottom: 2rem;
-  transition: opacity 0.2s ease;
-}
-
-.back-link:hover {
-  opacity: 1;
 }
 
 .project-header {
@@ -350,11 +338,6 @@ main {
   flex-direction: column;
   gap: 0.5rem;
   flex: 1;
-  transition: opacity 0.2s ease;
-}
-
-.project-nav-link:hover {
-  opacity: 0.7;
 }
 
 .project-nav-link.next {
@@ -364,7 +347,6 @@ main {
 
 .nav-label {
   font-size: 0.85rem;
-  opacity: 0.6;
 }
 
 .nav-title {

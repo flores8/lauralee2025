@@ -13,21 +13,11 @@ describe('Portfolio', () => {
   it('renders the portfolio introduction text', () => {
     render(<Portfolio />)
     
-    const intro = screen.getByText(/These case studies focus on foundational platform design/)
+    const intro = screen.getByText(/A look at how I approach complex product problems/)
     expect(intro).toBeInTheDocument()
   })
 
-  it('renders the Overview section', () => {
-    render(<Portfolio />)
-    
-    const overviewHeading = screen.getByRole('heading', { name: 'Overview', level: 2 })
-    expect(overviewHeading).toBeInTheDocument()
-    
-    const overviewText = screen.getByText(/system-level design decisions/)
-    expect(overviewText).toBeInTheDocument()
-  })
-
-  it('links to the PDF and Word versions of the resume', () => {
+  it('offers the PDF as the only resume download', () => {
     render(<Portfolio />)
 
     const pdfLink = screen.getByRole('link', { name: /Resume \(PDF\)/ })
@@ -35,22 +25,20 @@ describe('Portfolio', () => {
     expect(pdfLink).toHaveAttribute('target', '_blank')
     expect(pdfLink).toHaveAttribute('rel', 'noopener noreferrer')
 
-    const wordLink = screen.getByRole('link', { name: 'Download Word version (DOCX)' })
-    expect(wordLink).toHaveAttribute('href', '/resume/lauralee-flores-resume.docx')
-    expect(wordLink).toHaveAttribute('download')
+    const resumeLinks = screen.getAllByRole('link').filter((link) => link.getAttribute('href')?.startsWith('/resume/'))
+    expect(resumeLinks).toEqual([pdfLink])
   })
 
   describe('Project cards', () => {
-    it('renders all projects from portfolio data', () => {
+    it('renders all projects with Permissions first', () => {
       render(<Portfolio />)
-      
-      // Should render all projects
-      expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(projects.length + 1) // +1 for Overview heading
-      
-      // Check each project is rendered
-      projects.forEach((project) => {
-        expect(screen.getByRole('heading', { name: project.title })).toBeInTheDocument()
+
+      const headings = screen.getAllByRole('heading', { level: 2 })
+      expect(headings).toHaveLength(projects.length)
+      projects.forEach((project, index) => {
+        expect(headings[index]).toHaveAccessibleName(project.title)
       })
+      expect(headings[0]).toHaveAccessibleName('Reframing access as a platform communication problem')
     })
 
     it('renders project thesis for each project', () => {
@@ -61,31 +49,12 @@ describe('Portfolio', () => {
       })
     })
 
-    it('renders project role for each project', () => {
-      const { container } = render(<Portfolio />)
-      
-      // All projects have the same role, so check that we have the right number of role elements
-      const roleElements = container.querySelectorAll('.portfolio-card-role')
-      expect(roleElements).toHaveLength(projects.length)
-      
-      // Verify they all contain the expected role text
-      roleElements.forEach((element) => {
-        expect(element).toHaveTextContent('Staff Product Designer · CoreWeave')
-      })
-    })
-
-    it('renders "View case study" links for each project with correct href', () => {
+    it('uses each project title as its case study link', () => {
       render(<Portfolio />)
-      
-      const caseStudyLinks = screen.getAllByRole('link', { name: /View case study/ })
-      expect(caseStudyLinks).toHaveLength(projects.length)
-      
-      // Verify each project has a corresponding link with correct href
+
       projects.forEach((project) => {
-        const linkWithHref = caseStudyLinks.find(
-          link => link.getAttribute('href') === `/work/${project.slug}`
-        )
-        expect(linkWithHref).toBeTruthy()
+        const link = screen.getByRole('link', { name: project.title })
+        expect(link).toHaveAttribute('href', `/work/${project.slug}`)
       })
     })
 
@@ -96,11 +65,8 @@ describe('Portfolio', () => {
       expect(portfolioCards).toHaveLength(projects.length)
       
       portfolioCards.forEach((card) => {
-        // Each card should have a heading, thesis, role, and link
-        expect(card.querySelector('h2')).toBeInTheDocument()
+        expect(card.querySelector('h2 .portfolio-card-link')).toBeInTheDocument()
         expect(card.querySelector('.portfolio-card-thesis')).toBeInTheDocument()
-        expect(card.querySelector('.portfolio-card-role')).toBeInTheDocument()
-        expect(card.querySelector('.portfolio-card-link')).toBeInTheDocument()
       })
     })
   })
@@ -118,13 +84,6 @@ describe('Portfolio', () => {
       
       const portfolioOverview = container.querySelector('.portfolio-overview')
       expect(portfolioOverview).toBeInTheDocument()
-    })
-
-    it('renders how-to-read section', () => {
-      const { container } = render(<Portfolio />)
-      
-      const howToRead = container.querySelector('.how-to-read')
-      expect(howToRead).toBeInTheDocument()
     })
   })
 })
