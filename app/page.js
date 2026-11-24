@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import PortfolioActions from './components/PortfolioActions'
 import styles from './home.module.css'
 
 export default function Home() {
@@ -14,14 +14,7 @@ export default function Home() {
       <p>
         If you’re building a design or research team in a complex product organization, I’d love to compare notes on how you give people room to lead.
       </p>
-      <div className={styles.actions}>
-        <a href="https://www.linkedin.com/in/lauraleeflores" className={styles.primary}>
-          Connect on LinkedIn <span aria-hidden="true">↗</span>
-        </a>
-        <Link href="/work" className={styles.secondary}>
-          View selected work <span aria-hidden="true">→</span>
-        </Link>
-      </div>
+      <PortfolioActions />
     </div>
   )
 }
